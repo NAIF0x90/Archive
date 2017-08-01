@@ -5,9 +5,6 @@
  */
 package archive;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -27,6 +24,9 @@ public class login extends javax.swing.JFrame {
     
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+        
+        
     }
 
     /**
@@ -213,7 +213,8 @@ public class login extends javax.swing.JFrame {
         for (int i = 0; i < data.getSize(); i++) {
             if(ID == data.getinfo(i).getID()){
                 if( password.getText().equals(data.getinfo(i).getPassWord())){
-                                    home H = new home(data);
+                    
+                                    home H = new home(data ,data.getinfo(i).getAuthorize());
                                     H.setVisible(rootPaneCheckingEnabled);
                                     this.setVisible(false);
                                     break;
