@@ -32,7 +32,7 @@ public class home extends javax.swing.JFrame {
        
     private DataBaseManger data;
     private int Authorize;
-    
+
     
     public home(DataBaseManger data , int authorize) {
         initComponents();
@@ -40,8 +40,7 @@ public class home extends javax.swing.JFrame {
         this.data = data;
         this.Authorize = authorize;
 
-        
-         DefaultTableModel model = new DefaultTableModel() {
+       DefaultTableModel model = new DefaultTableModel() {
 
     @Override
     public boolean isCellEditable(int row, int column) {
@@ -76,7 +75,7 @@ public class home extends javax.swing.JFrame {
         
         
         
-              DefaultTableModel Emodel = new DefaultTableModel() {
+        DefaultTableModel Emodel = new DefaultTableModel() {
 
        @Override
        public boolean isCellEditable(int row, int column) {
@@ -93,16 +92,14 @@ public class home extends javax.swing.JFrame {
         for (int i = 0; i < data.getExpSize(); i++) {
         Emodel.addRow(new Object[] {data.getExp(i).getCompany() , data.getExp(i).getName()});
         
-        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-        ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+
                 }
+        
         
         renderer = (DefaultTableCellRenderer) ExpensesTable.getTableHeader().getDefaultRenderer();
         renderer.setHorizontalAlignment(0);
         
                 for(int i = 0; i < 2; i++){
-            
         DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
         rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
         ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
@@ -1130,6 +1127,58 @@ public class home extends javax.swing.JFrame {
 
         data.AddUser(emp);
         
+        NameE.setText("");
+        RegiE.setText("");
+        EmailE.setText("");
+        NummberE.setText("");
+        MissionE.setText("");
+        PerfE.setText("");
+        ExecE.setText("");
+        Password.setText("");
+                
+        data = new DataBaseManger();
+        
+  DefaultTableModel model = new DefaultTableModel() {
+
+    @Override
+    public boolean isCellEditable(int row, int column) {
+       //all cells false
+       return false;
+    }
+}; 
+         EmpTable.setModel(model);
+
+        // Create a couple of columns 
+        model.addColumn("PHONE");
+        model.addColumn("ID");
+        model.addColumn("NAME"); 
+          
+        for (int i = 0; i < data.getSize(); i++) {
+        // Append a row 
+        model.addRow(new Object[]{data.getinfo(i).getPhone(), data.getinfo(i).getID() , data.getinfo(i).getName()});
+
+        }
+
+        for(int i = 0; i< EmpTable.getColumnCount(); i++){
+            
+                    
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+        EmpTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+        }
+        
+        
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) EmpTable.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navEmployeeH);
+        nav2.repaint();
+        nav2.revalidate();
+        
     }//GEN-LAST:event_SaveEmpActionPerformed
 
     private void cancelEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelEmpActionPerformed
@@ -1166,9 +1215,58 @@ public class home extends javax.swing.JFrame {
         
         data.AddExp(exp);
                 
+        Name2.setText("");
+        Count2.setText("");
+        Model2.setText("");
+        SerNum2.setText("");        
+        CompN2.setText("");
+        MissionE2.setText("");
         
         
+           data = new DataBaseManger();
         
+        DefaultTableModel Emodel = new DefaultTableModel() {
+
+       @Override
+       public boolean isCellEditable(int row, int column) {
+          //all cells false
+          return false;
+          }
+             }; 
+         ExpensesTable.setModel(Emodel);
+
+        // Create a couple of columns 
+        Emodel.addColumn("الشركة ");
+        Emodel.addColumn("الاسم"); 
+        
+        for (int i = 0; i < data.getExpSize(); i++) {
+        Emodel.addRow(new Object[] {data.getExp(i).getCompany() , data.getExp(i).getName()});
+        
+
+                }
+        
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpensesTable.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+        
+                for(int i = 0; i < 2; i++){
+            
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+        ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+            
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpansesH);
+        nav2.repaint();
+        nav2.revalidate(); 
+        
+        }
+
+                
+                
+                
     }//GEN-LAST:event_SaveExp2ActionPerformed
 
     private void cancelExp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp2ActionPerformed
@@ -1336,9 +1434,6 @@ public class home extends javax.swing.JFrame {
         
         
         for (int i = 0; i < data.getExpSize(); i++) {
-        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-        ExpShow.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
         
         DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpShow.getTableHeader().getDefaultRenderer();
         renderer.setHorizontalAlignment(0);
@@ -1352,8 +1447,6 @@ public class home extends javax.swing.JFrame {
         ExpShow.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
             
         }
-        
-
         
         
         

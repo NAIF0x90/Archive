@@ -5,6 +5,9 @@
  */
 package archive;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.font.GlyphMetrics;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,7 +27,6 @@ public class login extends javax.swing.JFrame {
     
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
         
         
     }
@@ -57,9 +59,19 @@ public class login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jPanel1KeyReleased(evt);
+            }
+        });
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/logo.png"))); // NOI18N
+        logo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                logoKeyPressed(evt);
+            }
+        });
 
         userText.setFont(new java.awt.Font("AdvertisingMedium", 0, 14)); // NOI18N
         userText.setText("إسم المستخدم");
@@ -73,6 +85,11 @@ public class login extends javax.swing.JFrame {
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginActionPerformed(evt);
+            }
+        });
+        login.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                loginKeyReleased(evt);
             }
         });
 
@@ -94,10 +111,20 @@ public class login extends javax.swing.JFrame {
                 passwordActionPerformed(evt);
             }
         });
+        password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passwordKeyPressed(evt);
+            }
+        });
 
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userActionPerformed(evt);
+            }
+        });
+        user.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                userKeyPressed(evt);
             }
         });
 
@@ -201,6 +228,58 @@ public class login extends javax.swing.JFrame {
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
 
+              Login__();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginActionPerformed
+
+    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userActionPerformed
+
+    private void logoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_logoKeyPressed
+        // TODO add your handling code here:
+         
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+              Login__();
+        }
+        
+    }//GEN-LAST:event_logoKeyPressed
+
+    private void loginKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginKeyReleased
+
+        
+    }//GEN-LAST:event_loginKeyReleased
+
+    private void jPanel1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel1KeyReleased
+        // TODO add your handling code here:
+        
+                         
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+              Login__();
+        }
+
+    }//GEN-LAST:event_jPanel1KeyReleased
+
+    private void userKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userKeyPressed
+        // TODO add your handling code here:
+        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+              Login__();
+        }
+    }//GEN-LAST:event_userKeyPressed
+
+    private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
+        // TODO add your handling code here:
+        
+                
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+              Login__();
+        }
+    }//GEN-LAST:event_passwordKeyPressed
+
+    
+    private void Login__(){
+        
         int ID = 0;
         try{
         ID = Integer.parseInt(user.getText());
@@ -230,16 +309,8 @@ public class login extends javax.swing.JFrame {
         
 
 
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginActionPerformed
-
-    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userActionPerformed
-
-    
-    
+        
+    }
     
     
     
