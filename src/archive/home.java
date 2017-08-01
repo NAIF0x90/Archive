@@ -130,6 +130,7 @@ public class home extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         nav2 = new javax.swing.JPanel();
         navHome1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         navExpensesH1 = new javax.swing.JPanel();
         navExpansesH = new javax.swing.JPanel();
         navEmpHead = new javax.swing.JLabel();
@@ -296,15 +297,17 @@ public class home extends javax.swing.JFrame {
 
         navHome1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/home.jpg"))); // NOI18N
+
         javax.swing.GroupLayout navHome1Layout = new javax.swing.GroupLayout(navHome1);
         navHome1.setLayout(navHome1Layout);
         navHome1Layout.setHorizontalGroup(
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 651, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         navHome1Layout.setVerticalGroup(
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 664, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         nav2.add(navHome1, "card2");
@@ -359,7 +362,7 @@ public class home extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpansesHLayout.createSequentialGroup()
                         .addComponent(navEmpHead)
                         .addGap(143, 143, 143))))
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
         );
         navExpansesHLayout.setVerticalGroup(
             navExpansesHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,7 +380,7 @@ public class home extends javax.swing.JFrame {
         navExpensesH1.setLayout(navExpensesH1Layout);
         navExpensesH1Layout.setHorizontalGroup(
             navExpensesH1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 651, Short.MAX_VALUE)
+            .addGap(0, 674, Short.MAX_VALUE)
             .addGroup(navExpensesH1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(navExpensesH1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -446,7 +449,7 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(navEmployeeHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(navEmployeeHLayout.createSequentialGroup()
-                        .addGap(0, 544, Short.MAX_VALUE)
+                        .addGap(0, 567, Short.MAX_VALUE)
                         .addComponent(EmpAdd))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
@@ -512,7 +515,7 @@ public class home extends javax.swing.JFrame {
         navProgzLayout.setHorizontalGroup(
             navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navProgzLayout.createSequentialGroup()
-                .addContainerGap(341, Short.MAX_VALUE)
+                .addContainerGap(383, Short.MAX_VALUE)
                 .addGroup(navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navProgzLayout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -609,7 +612,7 @@ public class home extends javax.swing.JFrame {
         navEmployeeAddLayout.setHorizontalGroup(
             navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navEmployeeAddLayout.createSequentialGroup()
-                .addContainerGap(350, Short.MAX_VALUE)
+                .addContainerGap(373, Short.MAX_VALUE)
                 .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeAddLayout.createSequentialGroup()
                         .addComponent(jLabel11)
@@ -743,7 +746,7 @@ public class home extends javax.swing.JFrame {
         navEmployeeLayout.setHorizontalGroup(
             navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
-                .addGap(0, 297, Short.MAX_VALUE)
+                .addGap(0, 412, Short.MAX_VALUE)
                 .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
                         .addComponent(jLabel20)
@@ -839,7 +842,7 @@ public class home extends javax.swing.JFrame {
         navExpensesِAddLayout.setHorizontalGroup(
             navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navExpensesِAddLayout.createSequentialGroup()
-                .addContainerGap(321, Short.MAX_VALUE)
+                .addContainerGap(386, Short.MAX_VALUE)
                 .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
                         .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -963,7 +966,7 @@ public class home extends javax.swing.JFrame {
         navExpensesِLayout.setHorizontalGroup(
             navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِLayout.createSequentialGroup()
-                .addGap(0, 297, Short.MAX_VALUE)
+                .addGap(0, 412, Short.MAX_VALUE)
                 .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِLayout.createSequentialGroup()
                         .addComponent(jLabel30)
@@ -1034,9 +1037,230 @@ public class home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void cancelExp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp3ActionPerformed
+        // TODO add your handling code here:
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpansesH);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelExp3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+        MessageFormat header = new MessageFormat ("heade.png");
+        MessageFormat footer = new MessageFormat("report frint");
+        try {
+            ExpShow.print(JTable.PrintMode.NORMAL, header, footer);
+        } catch (java.awt.print.PrinterException e) {
+            System.err.format("cannot print %s%n", e.getMessage());
+        }
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void ExpShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpShowMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_ExpShowMouseClicked
+
+    private void cancelExp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp2ActionPerformed
+        // TODO add your handling code here:
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpansesH);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelExp2ActionPerformed
+
+    private void SaveExp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveExp2ActionPerformed
+        // TODO add your handling code here:
+
+        Expensses exp = new Expensses();
+        exp.setName(Name2.getText());
+        exp.setNumber(Count2.getText());
+        exp.setModel(Model2.getText());
+        exp.setSerial(SerNum2.getText());
+        exp.setCompany(CompN2.getText());
+        exp.setOther(MissionE2.getText());
+
+        data.AddExp(exp);
+
+        Name2.setText("");
+        Count2.setText("");
+        Model2.setText("");
+        SerNum2.setText("");
+        CompN2.setText("");
+        MissionE2.setText("");
+
+        data = new DataBaseManger();
+
+        DefaultTableModel Emodel = new DefaultTableModel() {
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        };
+        ExpensesTable.setModel(Emodel);
+
+        // Create a couple of columns
+        Emodel.addColumn("الشركة ");
+        Emodel.addColumn("الاسم");
+
+        for (int i = 0; i < data.getExpSize(); i++) {
+            Emodel.addRow(new Object[] {data.getExp(i).getCompany() , data.getExp(i).getName()});
+
+        }
+
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpensesTable.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+
+        for(int i = 0; i < 2; i++){
+
+            DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+            rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+            ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+
+            nav2.removeAll();
+            nav2.repaint();
+            nav2.revalidate();
+            //adding panel
+            nav2.add(navExpansesH);
+            nav2.repaint();
+            nav2.revalidate();
+
+        }
+
+    }//GEN-LAST:event_SaveExp2ActionPerformed
+
+    private void SerNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SerNum2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SerNum2ActionPerformed
+
+    private void cancelExp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp4ActionPerformed
+        // TODO add your handling code here:
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navEmployeeH);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelExp4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void cancelEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelEmpActionPerformed
+        // TODO add your handling code here:
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navEmployeeH);
+        nav2.repaint();
+        nav2.revalidate();
+
+    }//GEN-LAST:event_cancelEmpActionPerformed
+
+    private void SaveEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveEmpActionPerformed
+        // TODO add your handling code here:
+
+        EMP_INFO emp = new EMP_INFO();
+        emp.setName(NameE.getText());
+        emp.setID(Integer.parseInt(RegiE.getText()));
+        emp.setEmail(EmailE.getText());
+        emp.setPhone(NummberE.getText());
+        emp.setSection(MissionE.getText());
+        emp.setJob(PerfE.getText());
+        emp.setSuccess(Double.parseDouble(ExecE.getText()));
+        emp.setPassWord(Password.getText());
+
+        data.AddUser(emp);
+
+        NameE.setText("");
+        RegiE.setText("");
+        EmailE.setText("");
+        NummberE.setText("");
+        MissionE.setText("");
+        PerfE.setText("");
+        ExecE.setText("");
+        Password.setText("");
+
+        data = new DataBaseManger();
+
+        DefaultTableModel model = new DefaultTableModel() {
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        };
+        EmpTable.setModel(model);
+
+        // Create a couple of columns
+        model.addColumn("PHONE");
+        model.addColumn("ID");
+        model.addColumn("NAME");
+
+        for (int i = 0; i < data.getSize(); i++) {
+            // Append a row
+            model.addRow(new Object[]{data.getinfo(i).getPhone(), data.getinfo(i).getID() , data.getinfo(i).getName()});
+
+        }
+
+        for(int i = 0; i< EmpTable.getColumnCount(); i++){
+
+            DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+            rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+            EmpTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+        }
+
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) EmpTable.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navEmployeeH);
+        nav2.repaint();
+        nav2.revalidate();
+
+    }//GEN-LAST:event_SaveEmpActionPerformed
+
+    private void NameEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameEActionPerformed
+
+    private void norbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_norbuttonActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            Desktop.getDesktop().browse(new URL ("https://noor.moe.gov.sa/Noor/login.aspx").toURI());
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_norbuttonActionPerformed
+
     private void moebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moebuttonActionPerformed
         // TODO add your handling code here:
-        
+
         try {
             // TODO add your handling code here:
             Desktop.getDesktop().browse(new URL ("https://www.moe.gov.sa/ar/pages/login.aspx").toURI());
@@ -1047,7 +1271,7 @@ public class home extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_moebuttonActionPerformed
 
     private void farsbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farsbuttonActionPerformed
@@ -1062,6 +1286,132 @@ public class home extends javax.swing.JFrame {
             Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_farsbuttonActionPerformed
+
+    private void EmpTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EmpTableMouseClicked
+        // TODO add your handling code here:
+
+        JTable target = (JTable)evt.getSource();
+        int column = target.getSelectedRow();
+        System.out.println(column);
+
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navEmployee);
+        nav2.repaint();
+        nav2.revalidate();
+
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) target.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+
+        DefaultTableModel Emodel = new DefaultTableModel() {
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        };
+        EmpInfo.setModel(Emodel);
+
+        // Create a couple of columns
+        Emodel.addColumn("معلومات الموظف");
+        Emodel.addColumn("الجدول");
+
+        Emodel.addRow(new Object[] {data.getinfo(column).getName()      , "الاسم"});
+        Emodel.addRow(new Object[] {data.getinfo(column).getID()        , "الهوية"});
+        Emodel.addRow(new Object[] {data.getinfo(column).getPhone()     , "رقم الجوال"});
+        Emodel.addRow(new Object[] {data.getinfo(column).getJob()       , "المسمى الوظيفي"});
+        Emodel.addRow(new Object[] {data.getinfo(column).getSection()   , "القسم"});
+        Emodel.addRow(new Object[] {data.getinfo(column).getSuccess()   , "الاداء الوظيفي"});
+        Emodel.addRow(new Object[] {data.getinfo(column).getEmail()     , "البريد الالكتروني "});
+
+        for(int i = 0; i < 2; i++){
+
+            DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+            rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+            EmpInfo.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+
+        }
+
+    }//GEN-LAST:event_EmpTableMouseClicked
+
+    private void EmpAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpAddActionPerformed
+        // TODO add your handling code here:
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navEmployeeAdd);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_EmpAddActionPerformed
+
+    private void ExpensesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpensesTableMouseClicked
+        // TODO add your handling code here:
+        // TODO add your handling code here:\
+
+        JTable target = (JTable)evt.getSource();
+        int column = target.getSelectedRow();
+
+        DefaultTableModel Emodel = new DefaultTableModel() {
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        };
+        ExpShow.setModel(Emodel);
+
+        // Create a couple of columns
+        Emodel.addColumn("البيانات");
+        Emodel.addColumn("الجدول");
+
+        Emodel.addRow(new Object[] {data.getExp(column).getName() , "الاسم"});
+        Emodel.addRow(new Object[] {data.getExp(column).getNumber() , "العدد"});
+        Emodel.addRow(new Object[] {data.getExp(column).getModel() , "الموديل"});
+        Emodel.addRow(new Object[] {data.getExp(column).getCompany() , "نوع الشركة"});
+        Emodel.addRow(new Object[] {data.getExp(column).getSerial() , "الرقم التسلسلي"});
+        Emodel.addRow(new Object[] {data.getExp(column).getOther(), "اخرى"});
+
+        for (int i = 0; i < data.getExpSize(); i++) {
+
+            DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpShow.getTableHeader().getDefaultRenderer();
+            renderer.setHorizontalAlignment(0);
+        }
+
+        for(int i = 0; i < 2; i++){
+
+            DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+            rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+            ExpShow.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+
+        }
+
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesِ);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_ExpensesTableMouseClicked
+
+    private void ExpAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExpAdd1ActionPerformed
+        // TODO add your handling code here:
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesِAdd);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_ExpAdd1ActionPerformed
 
     private void progzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_progzActionPerformed
         // TODO add your handling code here:
@@ -1085,7 +1435,6 @@ public class home extends javax.swing.JFrame {
         nav2.add(navExpansesH);
         nav2.repaint();
         nav2.revalidate();
-
     }//GEN-LAST:event_expensesActionPerformed
 
     private void employeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeActionPerformed
@@ -1112,377 +1461,7 @@ public class home extends javax.swing.JFrame {
         nav2.revalidate();
     }//GEN-LAST:event_homeActionPerformed
 
-    private void SaveEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveEmpActionPerformed
-        // TODO add your handling code here:
-        
-        EMP_INFO emp = new EMP_INFO();
-        emp.setName(NameE.getText());
-        emp.setID(Integer.parseInt(RegiE.getText()));
-        emp.setEmail(EmailE.getText());
-        emp.setPhone(NummberE.getText());
-        emp.setSection(MissionE.getText());
-        emp.setJob(PerfE.getText());
-        emp.setSuccess(Double.parseDouble(ExecE.getText()));
-        emp.setPassWord(Password.getText());
-
-        data.AddUser(emp);
-        
-        NameE.setText("");
-        RegiE.setText("");
-        EmailE.setText("");
-        NummberE.setText("");
-        MissionE.setText("");
-        PerfE.setText("");
-        ExecE.setText("");
-        Password.setText("");
-                
-        data = new DataBaseManger();
-        
-  DefaultTableModel model = new DefaultTableModel() {
-
-    @Override
-    public boolean isCellEditable(int row, int column) {
-       //all cells false
-       return false;
-    }
-}; 
-         EmpTable.setModel(model);
-
-        // Create a couple of columns 
-        model.addColumn("PHONE");
-        model.addColumn("ID");
-        model.addColumn("NAME"); 
-          
-        for (int i = 0; i < data.getSize(); i++) {
-        // Append a row 
-        model.addRow(new Object[]{data.getinfo(i).getPhone(), data.getinfo(i).getID() , data.getinfo(i).getName()});
-
-        }
-
-        for(int i = 0; i< EmpTable.getColumnCount(); i++){
-            
-                    
-        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-        EmpTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-        }
-        
-        
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) EmpTable.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navEmployeeH);
-        nav2.repaint();
-        nav2.revalidate();
-        
-    }//GEN-LAST:event_SaveEmpActionPerformed
-
-    private void cancelEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelEmpActionPerformed
-        // TODO add your handling code here:
-         //remove panel
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navEmployeeH);
-        nav2.repaint();
-        nav2.revalidate();
-        
-    }//GEN-LAST:event_cancelEmpActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        
-        
-       
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void SaveExp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveExp2ActionPerformed
-        // TODO add your handling code here:
-        
-        Expensses exp = new Expensses();
-        exp.setName(Name2.getText());
-        exp.setNumber(Count2.getText());
-        exp.setModel(Model2.getText());
-        exp.setSerial(SerNum2.getText());
-        exp.setCompany(CompN2.getText());
-        exp.setOther(MissionE2.getText());
-        
-        data.AddExp(exp);
-                
-        Name2.setText("");
-        Count2.setText("");
-        Model2.setText("");
-        SerNum2.setText("");        
-        CompN2.setText("");
-        MissionE2.setText("");
-        
-        
-           data = new DataBaseManger();
-        
-        DefaultTableModel Emodel = new DefaultTableModel() {
-
-       @Override
-       public boolean isCellEditable(int row, int column) {
-          //all cells false
-          return false;
-          }
-             }; 
-         ExpensesTable.setModel(Emodel);
-
-        // Create a couple of columns 
-        Emodel.addColumn("الشركة ");
-        Emodel.addColumn("الاسم"); 
-        
-        for (int i = 0; i < data.getExpSize(); i++) {
-        Emodel.addRow(new Object[] {data.getExp(i).getCompany() , data.getExp(i).getName()});
-        
-
-                }
-        
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpensesTable.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-        
-                for(int i = 0; i < 2; i++){
-            
-        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-        ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-            
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navExpansesH);
-        nav2.repaint();
-        nav2.revalidate(); 
-        
-        }
-
-                
-                
-                
-    }//GEN-LAST:event_SaveExp2ActionPerformed
-
-    private void cancelExp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp2ActionPerformed
-        // TODO add your handling code here:
-         //remove panel
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navExpansesH);
-        nav2.repaint();
-        nav2.revalidate(); 
-    }//GEN-LAST:event_cancelExp2ActionPerformed
-
-    private void SerNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SerNum2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SerNum2ActionPerformed
-
     
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       
-        MessageFormat header = new MessageFormat ("heade.png");
-        MessageFormat footer = new MessageFormat("report frint");
-             try {
-                 ExpShow.print(JTable.PrintMode.NORMAL, header, footer);
-             } catch (java.awt.print.PrinterException e) { 
-                 System.err.format("cannot print %s%n", e.getMessage());
-             }
-        
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void cancelExp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp3ActionPerformed
-        // TODO add your handling code here:
-         nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navExpansesH);
-        nav2.repaint();
-        nav2.revalidate();
-    }//GEN-LAST:event_cancelExp3ActionPerformed
-
-    private void cancelExp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExp4ActionPerformed
-        // TODO add your handling code here:
-          //remove panel
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navEmployeeH);
-        nav2.repaint();
-        nav2.revalidate();
-    }//GEN-LAST:event_cancelExp4ActionPerformed
-
-    private void EmpTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EmpTableMouseClicked
-        // TODO add your handling code here:
-        
-            JTable target = (JTable)evt.getSource();
-            int column = target.getSelectedRow();
-            System.out.println(column);
-            
-            
-            
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navEmployee);
-        nav2.repaint();
-        nav2.revalidate();
-        
-        
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) target.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-        
-        
-        DefaultTableModel Emodel = new DefaultTableModel() {
-
-       @Override
-       public boolean isCellEditable(int row, int column) {
-          //all cells false
-          return false;
-          }
-             }; 
-         EmpInfo.setModel(Emodel);
-
-        // Create a couple of columns 
-        Emodel.addColumn("معلومات الموظف");
-        Emodel.addColumn("الجدول"); 
-        
-        Emodel.addRow(new Object[] {data.getinfo(column).getName()      , "الاسم"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getID()        , "الهوية"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getPhone()     , "رقم الجوال"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getJob()       , "المسمى الوظيفي"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getSection()   , "القسم"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getSuccess()   , "الاداء الوظيفي"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getEmail()     , "البريد الالكتروني "});
-        
-        for(int i = 0; i < 2; i++){
-            
-        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-        EmpInfo.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-            
-        }
-        
-        
-        
-    }//GEN-LAST:event_EmpTableMouseClicked
-
-    private void EmpAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpAddActionPerformed
-        // TODO add your handling code here:
-        //remove panel
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navEmployeeAdd);
-        nav2.repaint();
-        nav2.revalidate();
-    }//GEN-LAST:event_EmpAddActionPerformed
-
-    private void norbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_norbuttonActionPerformed
-        // TODO add your handling code here:
-        try {
-            // TODO add your handling code here:
-            Desktop.getDesktop().browse(new URL ("https://noor.moe.gov.sa/Noor/login.aspx").toURI());
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_norbuttonActionPerformed
-
-    private void ExpensesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpensesTableMouseClicked
-        // TODO add your handling code here:
-        // TODO add your handling code here:\
-        
-            JTable target = (JTable)evt.getSource();
-            int column = target.getSelectedRow();        
-        
-        DefaultTableModel Emodel = new DefaultTableModel() {
-
-       @Override
-       public boolean isCellEditable(int row, int column) {
-          //all cells false
-          return false;
-          }
-             }; 
-         ExpShow.setModel(Emodel);
-
-        // Create a couple of columns 
-        Emodel.addColumn("البيانات");
-        Emodel.addColumn("الجدول"); 
-        
-        Emodel.addRow(new Object[] {data.getExp(column).getName() , "الاسم"});
-        Emodel.addRow(new Object[] {data.getExp(column).getNumber() , "العدد"});
-        Emodel.addRow(new Object[] {data.getExp(column).getModel() , "الموديل"});
-        Emodel.addRow(new Object[] {data.getExp(column).getCompany() , "نوع الشركة"});
-        Emodel.addRow(new Object[] {data.getExp(column).getSerial() , "الرقم التسلسلي"});
-        Emodel.addRow(new Object[] {data.getExp(column).getOther(), "اخرى"});
-        
-        
-        for (int i = 0; i < data.getExpSize(); i++) {
-        
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpShow.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-                }
-        
-        
-        for(int i = 0; i < 2; i++){
-            
-        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-        ExpShow.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-            
-        }
-        
-        
-        
-        //remove panel
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navExpensesِ);
-        nav2.repaint();
-        nav2.revalidate();
-    }//GEN-LAST:event_ExpensesTableMouseClicked
-
-    private void ExpAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExpAdd1ActionPerformed
-        // TODO add your handling code here:
-        //remove panel
-        nav2.removeAll();
-        nav2.repaint();
-        nav2.revalidate();
-        //adding panel
-        nav2.add(navExpensesِAdd);
-        nav2.repaint();
-        nav2.revalidate();
-    }//GEN-LAST:event_ExpAdd1ActionPerformed
-
-    private void NameEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NameEActionPerformed
-
-    private void ExpShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpShowMouseClicked
-        // TODO add your handling code here:
-        
-        
-        
-    }//GEN-LAST:event_ExpShowMouseClicked
-
     
     
     
@@ -1544,6 +1523,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
