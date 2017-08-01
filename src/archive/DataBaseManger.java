@@ -74,6 +74,8 @@ public class DataBaseManger {
 				emp.setPassWord(rs.getString("PassWord"));
                                 emp.setPhone(rs.getString("Phone"));
                                 emp.setJob(rs.getString("Job"));
+                                emp.setEmail(rs.getString("Email"));
+                                emp.setAuthorize(rs.getInt("Authorize"));
 				
 				emp_info.add(emp);
 			}
@@ -167,7 +169,8 @@ public class DataBaseManger {
 				 "Name CHARACTER,"+
                                  "Phone CHARACTER,"+
                                  "Job CHARACTER ,"+
-                                 "Email CHARACTER);";
+                                 "Email CHARACTER, "+
+                                 "Authorize TINYINT(1));";
                  
                  String CreateE_Table = "CREATE TABLE Exp(" +  
 				 "Ecount int AUTO_INCREMENT,"+
@@ -248,9 +251,10 @@ public class DataBaseManger {
 			if(connect.isClosed())
 				Connect();
 			
-			String AddQury = "INSERT INTO `Employee` (`Name` , `Section` , `PassWord` , `Success` , `ID` , `Phone` , `Email`) " +
+			String AddQury = "INSERT INTO `Employee` (`Name` , `Section` , `PassWord` , `Success` , `ID` , `Phone` , `Email` , `Job`) " +
 					"VALUES ('"+ emp.getName() + "' , '" + emp.getSection() + "','" + emp.getPassWord() +  "','"+
-					emp.getSuccess() + "','" + emp.getID() +"','" + emp.getPhone() + "','" + emp.getEmail() + "');";
+					emp.getSuccess() + "','" + emp.getID() +"','" + emp.getPhone() + "','" + emp.getEmail() + "',"
+                                        +"'" + emp.getJob() +  "');";
 			
 			connect.createStatement().execute(AddQury);
 			System.out.println("Data has Bean Added");

@@ -71,8 +71,12 @@ public class home extends javax.swing.JFrame {
         }
         
         
-                
-        DefaultTableModel Emodel = new DefaultTableModel() {
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) EmpTable.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+        
+        
+        
+              DefaultTableModel Emodel = new DefaultTableModel() {
 
        @Override
        public boolean isCellEditable(int row, int column) {
@@ -83,30 +87,27 @@ public class home extends javax.swing.JFrame {
          ExpensesTable.setModel(Emodel);
 
         // Create a couple of columns 
-        Emodel.addColumn("البيانات");
-        Emodel.addColumn("الجدول"); 
+        Emodel.addColumn("الشركة ");
+        Emodel.addColumn("الاسم"); 
         
         for (int i = 0; i < data.getExpSize(); i++) {
-        Emodel.addRow(new Object[] {data.getExp(i).getName() , "الاسم"});
-        Emodel.addRow(new Object[] {data.getExp(i).getNumber() , "العدد"});
-        Emodel.addRow(new Object[] {data.getExp(i).getModel() , "الموديل"});
-        Emodel.addRow(new Object[] {data.getExp(i).getCompany() , "نوع الشركة"});
-        Emodel.addRow(new Object[] {data.getExp(i).getSerial() , "الرقم التسلسلي"});
-        Emodel.addRow(new Object[] {data.getExp(i).getOther(), "اخرى"});
+        Emodel.addRow(new Object[] {data.getExp(i).getCompany() , data.getExp(i).getName()});
         
         DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
         rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
         ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
                 }
         
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) EmpTable.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-        
         renderer = (DefaultTableCellRenderer) ExpensesTable.getTableHeader().getDefaultRenderer();
         renderer.setHorizontalAlignment(0);
         
-
-        
+                for(int i = 0; i < 2; i++){
+            
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+        ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+            
+        }
         
 
     }
@@ -1267,9 +1268,6 @@ public class home extends javax.swing.JFrame {
         Emodel.addRow(new Object[] {data.getinfo(column).getSuccess()   , "الاداء الوظيفي"});
         Emodel.addRow(new Object[] {data.getinfo(column).getEmail()     , "البريد الالكتروني "});
         
-        
-        
-        
         for(int i = 0; i < 2; i++){
             
         DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
@@ -1310,7 +1308,55 @@ public class home extends javax.swing.JFrame {
 
     private void ExpensesTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpensesTableMouseClicked
         // TODO add your handling code here:
-        // TODO add your handling code here:
+        // TODO add your handling code here:\
+        
+            JTable target = (JTable)evt.getSource();
+            int column = target.getSelectedRow();        
+        
+        DefaultTableModel Emodel = new DefaultTableModel() {
+
+       @Override
+       public boolean isCellEditable(int row, int column) {
+          //all cells false
+          return false;
+          }
+             }; 
+         ExpShow.setModel(Emodel);
+
+        // Create a couple of columns 
+        Emodel.addColumn("البيانات");
+        Emodel.addColumn("الجدول"); 
+        
+        Emodel.addRow(new Object[] {data.getExp(column).getName() , "الاسم"});
+        Emodel.addRow(new Object[] {data.getExp(column).getNumber() , "العدد"});
+        Emodel.addRow(new Object[] {data.getExp(column).getModel() , "الموديل"});
+        Emodel.addRow(new Object[] {data.getExp(column).getCompany() , "نوع الشركة"});
+        Emodel.addRow(new Object[] {data.getExp(column).getSerial() , "الرقم التسلسلي"});
+        Emodel.addRow(new Object[] {data.getExp(column).getOther(), "اخرى"});
+        
+        
+        for (int i = 0; i < data.getExpSize(); i++) {
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+        ExpShow.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+        
+        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpShow.getTableHeader().getDefaultRenderer();
+        renderer.setHorizontalAlignment(0);
+                }
+        
+        
+        for(int i = 0; i < 2; i++){
+            
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+        ExpShow.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+            
+        }
+        
+
+        
+        
+        
         //remove panel
         nav2.removeAll();
         nav2.repaint();

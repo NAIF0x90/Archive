@@ -11,7 +11,7 @@ public class EMP_INFO {
         private String Job;
         private String Email;
         private String PassWord;
-
+        private int Authorize;
         
         
 	public String getPassWord() {
@@ -120,6 +120,20 @@ public class EMP_INFO {
      */
     public void setEmail(String Email) {
         this.Email = Email;
+    }
+
+    /**
+     * @return the Authorize
+     */
+    public int getAuthorize() {
+        return Authorize;
+    }
+
+    /**
+     * @param Authorize the Authorize to set
+     */
+    public void setAuthorize(int Authorize) {
+        this.Authorize = Authorize;
     }
 
 
