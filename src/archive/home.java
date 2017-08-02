@@ -42,7 +42,9 @@ public class home extends javax.swing.JFrame {
     public home(DataBaseManger data , int authorize) {
         initComponents();
         
-        ImageIcon img = new ImageIcon("C:\\Users\\NAIF\\Documents\\NetBeansProjects\\Archive\\src\\archive\\icon.png");
+        
+        String pathToImageSortBy = "archive/icon.png";
+        ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
         this.setIconImage(img.getImage());   
     
         
@@ -255,6 +257,8 @@ public class home extends javax.swing.JFrame {
         ID = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ارشيف");
+        setIconImages(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -363,7 +367,7 @@ public class home extends javax.swing.JFrame {
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navHome1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

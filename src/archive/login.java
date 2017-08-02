@@ -27,9 +27,10 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
     
-        
-        ImageIcon img = new ImageIcon("C:\\Users\\NAIF\\Documents\\NetBeansProjects\\Archive\\src\\archive\\icon.png");
-        this.setIconImage(img.getImage());
+        String pathToImageSortBy = "archive/icon.png";
+        ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
+        this.setIconImage(img.getImage());   
+            
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
