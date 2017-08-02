@@ -5,9 +5,11 @@
  */
 package archive;
 
+import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.font.GlyphMetrics;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +27,9 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
     
+        
+        ImageIcon img = new ImageIcon("C:\\Users\\NAIF\\Documents\\NetBeansProjects\\Archive\\src\\archive\\icon.png");
+        this.setIconImage(img.getImage());
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
