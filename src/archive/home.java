@@ -16,6 +16,7 @@ import java.net.URL;
 import java.text.MessageFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
@@ -32,13 +33,18 @@ public class home extends javax.swing.JFrame {
     /**
      * Creates new form home
      */
-       
+      
+    
     private DataBaseManger data;
     private int Authorize;
     private int Cloumn;
     
     public home(DataBaseManger data , int authorize) {
         initComponents();
+        
+        ImageIcon img = new ImageIcon("C:\\Users\\NAIF\\Documents\\NetBeansProjects\\Archive\\src\\archive\\icon.png");
+        this.setIconImage(img.getImage());   
+    
         
         this.data = data;
         this.Authorize = authorize;
