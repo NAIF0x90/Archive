@@ -216,7 +216,8 @@ public class DataBaseManger {
 			
 			String updateQury = "UPDATE `Employee` SET `Name`='"+ emp.getName() + "', `Section`='"+ emp.getSection()+
 					"', `PassWord` = '"+ emp.getPassWord() +"' , `Success`= " + emp.getSuccess()  +
-					" WHERE id=" + emp.getID();
+                                        ", `Phone`='" + emp.getPhone() + "' ,`Job`=  '" + emp.getJob() + "' , `Email` = '"+ emp.getEmail()+
+					"' WHERE id=" + emp.getID();
 			
 			connect.createStatement().execute(updateQury);
 			System.out.println("Data has Bean updated");
@@ -233,7 +234,7 @@ public class DataBaseManger {
 			if(connect.isClosed())
 				Connect();
 			
-			String deleteQury = "DELETE * FROM `Employee` where ID =" + id+";";
+			String deleteQury = "DELETE FROM `Employee` where ID =" + id+";";
 			
 			connect.createStatement().execute(deleteQury);
 			System.out.println("Data has Bean Deleted");
@@ -300,6 +301,43 @@ public class DataBaseManger {
 		}
 		
 	}
+        
+        
+        public void UpdateExp(Expensses exp){
+            
+            		try {
+			if(connect.isClosed())
+				Connect();
+			
+			String updateQury = "UPDATE `Exp` SET `Name`='"+ exp.getName() + "', `Number`='"+ exp.getNumber()+
+					"', `Model` = '"+ exp.getModel() +"' , `Com`= '" + exp.getCompany()  +
+                                        "', `Other`='" + exp.getOther() + "' WHERE Siral=" + exp.getSerial();
+			
+			connect.createStatement().execute(updateQury);
+			System.out.println("Data has Bean updated");
+			Close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+            
+        }
+        
+        public void DeleteExp(String S){
+            
+            		try {
+			if(connect.isClosed())
+				Connect();
+			
+			String deleteQury = "DELETE FROM `Exp` where Siral =" + S+";";
+			
+			connect.createStatement().execute(deleteQury);
+			System.out.println("Data has Bean Deleted");
+			Close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+            
+        }
         
         
         

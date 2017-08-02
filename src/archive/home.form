@@ -49,8 +49,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="nav2" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Component id="nav1" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -231,17 +232,25 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" alignment="1" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel7" min="-2" pref="722" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel7" pref="682" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel4">
+                <Component class="javax.swing.JLabel" name="jLabel7">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/archive/home.jpg"/>
@@ -265,7 +274,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="674" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="752" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -277,7 +286,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="664" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="714" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="navExpansesH" min="-2" max="-2" attributes="0"/>
@@ -311,7 +320,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Component id="jScrollPane4" alignment="0" pref="644" max="32767" attributes="0"/>
+                          <Component id="jScrollPane4" alignment="0" pref="722" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -399,10 +408,10 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="567" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="645" max="32767" attributes="0"/>
                                   <Component id="EmpAdd" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jScrollPane3" alignment="1" pref="722" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -421,7 +430,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="EmpAdd" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="563" max="32767" attributes="0"/>
+                          <Component id="jScrollPane3" pref="613" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -509,7 +518,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="383" max="32767" attributes="0"/>
+                          <EmptySpace pref="461" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -553,7 +562,7 @@
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="farsbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="460" max="32767" attributes="0"/>
+                          <EmptySpace pref="510" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -642,7 +651,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="373" max="32767" attributes="0"/>
+                          <EmptySpace pref="430" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
@@ -739,7 +748,7 @@
                               <Component id="SaveEmp" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="cancelEmp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="263" max="32767" attributes="0"/>
+                          <EmptySpace pref="306" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -748,7 +757,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="14" style="0"/>
+                      <Font name="AdvertisingBold" size="18" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x625;&#x636;&#x627;&#x641;&#x629; &#x645;&#x648;&#x638;&#x641;"/>
                   </Properties>
@@ -756,7 +765,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel12">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x627;&#x633;&#x645; "/>
                   </Properties>
@@ -764,7 +773,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel13">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x633;&#x62c;&#x644; &#x627;&#x644;&#x645;&#x62f;&#x646;&#x64a;"/>
                   </Properties>
@@ -772,7 +781,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel14">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x631;&#x642;&#x645; &#x627;&#x644;&#x62c;&#x648;&#x627;&#x644;"/>
                   </Properties>
@@ -780,7 +789,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel15">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x628;&#x631;&#x64a;&#x62f; &#x627;&#x644;&#x627;&#x644;&#x643;&#x62a;&#x631;&#x648;&#x646;&#x64a;"/>
                   </Properties>
@@ -788,7 +797,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel16">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x647;&#x645;&#x629; &#x641;&#x64a; &#x627;&#x644;&#x642;&#x633;&#x645;"/>
                   </Properties>
@@ -796,7 +805,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel17">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x633;&#x645;&#x649; &#x627;&#x644;&#x648;&#x638;&#x64a;&#x641;&#x64a;"/>
                   </Properties>
@@ -804,7 +813,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel18">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x646;&#x633;&#x628;&#x629; &#x627;&#x646;&#x62c;&#x627;&#x632; &#x627;&#x644;&#x639;&#x645;&#x644;"/>
                   </Properties>
@@ -832,7 +841,7 @@
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="11" style="0"/>
+                      <Font name="AdvertisingBold" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x62d;&#x641;&#x638;"/>
                   </Properties>
@@ -846,7 +855,7 @@
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="11" style="0"/>
+                      <Font name="AdvertisingBold" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x63a;&#x627;&#x621;"/>
                   </Properties>
@@ -857,7 +866,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel22">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="     &#x643;&#x644;&#x645;&#x629; &#x627;&#x644;&#x645;&#x631;&#x648;&#x631;"/>
                   </Properties>
@@ -881,24 +890,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="412" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" pref="722" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
@@ -907,12 +903,36 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PrintEM" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="cancelExp4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cancelEm" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="DelEm" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="EditEm" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -925,14 +945,19 @@
                           <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="193" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cancelExp4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="EditEm" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DelEm" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" pref="252" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="PrintEM" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cancelEm" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -999,7 +1024,7 @@
                     <Property name="text" type="java.lang.String" value="&#x625;&#x633;&#x62a;&#x639;&#x644;&#x627;&#x645; &#x639;&#x646; &#x645;&#x648;&#x638;&#x641; &#x628;&#x627;&#x644;&#x642;&#x633;&#x645;"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="PrintEM">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
@@ -1010,10 +1035,10 @@
                     <Property name="text" type="java.lang.String" value="&#x637;&#x628;&#x627;&#x639;&#x629;"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrintEMActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="cancelExp4">
+                <Component class="javax.swing.JButton" name="cancelEm">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
@@ -1024,7 +1049,35 @@
                     <Property name="text" type="java.lang.String" value="&#x631;&#x62c;&#x648;&#x639;"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelExp4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelEmActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="EditEm">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="11" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62a;&#x639;&#x62f;&#x64a;&#x644;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditEmActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="DelEm">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="11" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62d;&#x630;&#x641;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DelEmActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1045,7 +1098,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="386" max="32767" attributes="0"/>
+                          <EmptySpace pref="444" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -1126,7 +1179,7 @@
                               <Component id="cancelExp2" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="SaveExp2" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="307" max="32767" attributes="0"/>
+                          <EmptySpace pref="345" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1135,7 +1188,7 @@
                 <Component class="javax.swing.JLabel" name="title">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="14" style="0"/>
+                      <Font name="AdvertisingBold" size="18" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x636;&#x627;&#x641;&#x629; &#x645;&#x635;&#x631;&#x648;&#x641;&#x627;&#x62a;"/>
                   </Properties>
@@ -1143,7 +1196,7 @@
                 <Component class="javax.swing.JLabel" name="Count">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x639;&#x62f;&#x62f; "/>
                   </Properties>
@@ -1151,7 +1204,7 @@
                 <Component class="javax.swing.JLabel" name="Model">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x648;&#x62f;&#x64a;&#x644;"/>
                   </Properties>
@@ -1159,7 +1212,7 @@
                 <Component class="javax.swing.JLabel" name="SerNum">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x631;&#x642;&#x645; &#x627;&#x644;&#x62a;&#x633;&#x644;&#x633;&#x644;&#x64a;"/>
                   </Properties>
@@ -1167,7 +1220,7 @@
                 <Component class="javax.swing.JLabel" name="CompN">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x646;&#x648;&#x639; &#x627;&#x644;&#x634;&#x631;&#x643;&#x629;"/>
                   </Properties>
@@ -1175,7 +1228,7 @@
                 <Component class="javax.swing.JLabel" name="other">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x62e;&#x631;&#x649;"/>
                   </Properties>
@@ -1199,7 +1252,7 @@
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="11" style="0"/>
+                      <Font name="AdvertisingBold" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x62d;&#x641;&#x638;"/>
                   </Properties>
@@ -1213,7 +1266,7 @@
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="11" style="0"/>
+                      <Font name="AdvertisingBold" size="12" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x63a;&#x627;&#x621;"/>
                   </Properties>
@@ -1224,7 +1277,7 @@
                 <Component class="javax.swing.JLabel" name="Name">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="AdvertisingBold" size="12" style="0"/>
+                      <Font name="AdvertisingBold" size="16" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x627;&#x633;&#x645;"/>
                   </Properties>
@@ -1249,34 +1302,43 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="412" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane2" alignment="1" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="cancelExp3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jScrollPane2" alignment="1" pref="722" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="cancelExp" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="DelEx" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="EditEx" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1289,14 +1351,19 @@
                           <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="33" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="EditEx" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DelEx" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="270" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cancelExp3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cancelExp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="194" max="32767" attributes="0"/>
+                          <EmptySpace pref="188" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1378,7 +1445,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="cancelExp3">
+                <Component class="javax.swing.JButton" name="cancelExp">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="cc" red="66" type="rgb"/>
@@ -1389,8 +1456,494 @@
                     <Property name="text" type="java.lang.String" value="&#x631;&#x62c;&#x648;&#x639;"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelExpActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="EditEx">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="11" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62a;&#x639;&#x62f;&#x64a;&#x644;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditExActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="DelEx">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="11" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62d;&#x630;&#x641;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DelExActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="navExpenses&#x650;Edit">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card2"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace pref="444" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="MissionE3" alignment="1" pref="195" max="32767" attributes="0"/>
+                                      <Component id="CompN3" alignment="1" pref="195" max="32767" attributes="0"/>
+                                      <Component id="Count3" alignment="1" pref="195" max="32767" attributes="0"/>
+                                      <Component id="Model3" alignment="1" pref="195" max="32767" attributes="0"/>
+                                      <Component id="Name3" alignment="1" pref="195" max="32767" attributes="0"/>
+                                      <Component id="SerN" alignment="1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="Count1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="SerNum1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Model1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="CompN1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="other1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Name1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="cancelExp3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="SaveExp3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="title1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="title1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="Name1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Name3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Count1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Count3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Model1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Model3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="SerNum1" min="-2" max="-2" attributes="0"/>
+                              <Component id="SerN" min="-2" pref="35" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="CompN1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CompN3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="other1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="MissionE3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cancelExp3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="SaveExp3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="350" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="title1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="18" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62a;&#x639;&#x62f;&#x64a;&#x644; &#x645;&#x635;&#x631;&#x648;&#x641;&#x627;&#x62a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="Count1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x639;&#x62f;&#x62f; "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="Model1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x648;&#x62f;&#x64a;&#x644;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="SerNum1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x631;&#x642;&#x645; &#x627;&#x644;&#x62a;&#x633;&#x644;&#x633;&#x644;&#x64a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="CompN1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x646;&#x648;&#x639; &#x627;&#x644;&#x634;&#x631;&#x643;&#x629;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="other1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x62e;&#x631;&#x649;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="Count3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="CompN3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="MissionE3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="Model3">
+                </Component>
+                <Component class="javax.swing.JButton" name="SaveExp3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62d;&#x641;&#x638;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveExp3ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="cancelExp3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x631;&#x62c;&#x648;&#x639;"/>
+                  </Properties>
+                  <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelExp3ActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="Name1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x627;&#x633;&#x645;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="Name3">
+                </Component>
+                <Component class="javax.swing.JLabel" name="SerN">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x631;&#x642;&#x645; &#x627;&#x644;&#x62a;&#x633;&#x644;&#x633;&#x644;&#x64a;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="navEmployeeEdit">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card2"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace pref="430" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="NummberE1" alignment="1" pref="195" max="32767" attributes="0"/>
+                                              <Component id="ExecE1" alignment="1" pref="195" max="32767" attributes="0"/>
+                                              <Component id="PerfE1" alignment="1" pref="195" max="32767" attributes="0"/>
+                                              <Component id="MissionE1" alignment="1" pref="195" max="32767" attributes="0"/>
+                                              <Component id="EmailE1" alignment="1" pref="195" max="32767" attributes="0"/>
+                                              <Component id="NameE1" alignment="1" pref="195" max="32767" attributes="0"/>
+                                              <Component id="ID" alignment="1" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="cancelEmp1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="SaveEmp1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="Password1" min="-2" pref="195" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel35" pref="84" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="NameE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="ID" pref="32" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="NummberE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="EmailE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="MissionE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="PerfE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ExecE1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Password1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="SaveEmp1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cancelEmp1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="309" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel23">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="18" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62a;&#x639;&#x62f;&#x64a;&#x644; &#x628;&#x64a;&#x627;&#x646;&#x627;&#x62a; &#x645;&#x648;&#x638;&#x641;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel24">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x627;&#x633;&#x645; "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel25">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x633;&#x62c;&#x644; &#x627;&#x644;&#x645;&#x62f;&#x646;&#x64a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel26">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x631;&#x642;&#x645; &#x627;&#x644;&#x62c;&#x648;&#x627;&#x644;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel27">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x628;&#x631;&#x64a;&#x62f; &#x627;&#x644;&#x627;&#x644;&#x643;&#x62a;&#x631;&#x648;&#x646;&#x64a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel28">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x647;&#x645;&#x629; &#x641;&#x64a; &#x627;&#x644;&#x642;&#x633;&#x645;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel33">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x633;&#x645;&#x649; &#x627;&#x644;&#x648;&#x638;&#x64a;&#x641;&#x64a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel34">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x646;&#x633;&#x628;&#x629; &#x627;&#x646;&#x62c;&#x627;&#x632; &#x627;&#x644;&#x639;&#x645;&#x644;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="NummberE1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="NameE1">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NameE1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="EmailE1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="MissionE1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="ExecE1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="PerfE1">
+                </Component>
+                <Component class="javax.swing.JButton" name="SaveEmp1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x62d;&#x641;&#x638;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveEmp1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="cancelEmp1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="cc" red="66" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="12" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x631;&#x62c;&#x648;&#x639;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelEmp1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel35">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="     &#x643;&#x644;&#x645;&#x629; &#x627;&#x644;&#x645;&#x631;&#x648;&#x631;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="Password1">
+                </Component>
+                <Component class="javax.swing.JLabel" name="ID">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="AdvertisingBold" size="16" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
