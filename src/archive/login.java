@@ -5,10 +5,8 @@
  */
 package archive;
 
-import java.awt.Image;
+import Objects.DataBaseManger;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.font.GlyphMetrics;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -27,7 +25,7 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
     
-        String pathToImageSortBy = "archive/icon.png";
+        String pathToImageSortBy = "res/icon.png";
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
         this.setIconImage(img.getImage());   
             
@@ -72,7 +70,7 @@ public class login extends javax.swing.JFrame {
         });
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/logo.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/logo.png"))); // NOI18N
         logo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 logoKeyPressed(evt);
@@ -151,43 +149,37 @@ public class login extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(footer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(footer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(144, 144, 144)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(236, 236, 236)
-                        .addComponent(cancel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(login))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(230, 230, 230)
+                        .addGap(95, 95, 95)
                         .addComponent(loginText))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(199, 199, 199)
-                        .addComponent(logo))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(userText)
-                            .addComponent(passText))))
-                .addContainerGap(160, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(165, 165, 165))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(cancel)
+                            .addGap(85, 85, 85)
+                            .addComponent(login))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(userText)
+                                .addComponent(passText)))
+                        .addComponent(jLabel1)
+                        .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(150, 150, 150))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
                 .addComponent(logo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(7, 7, 7)
                 .addComponent(loginText)
                 .addGap(8, 8, 8)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -211,106 +203,84 @@ public class login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-   
+    private void jPanel1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel1KeyReleased
+        // TODO add your handling code here:
 
-    
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            Login__();
+        }
+    }//GEN-LAST:event_jPanel1KeyReleased
+
+    private void userKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userKeyPressed
+        // TODO add your handling code here:
+
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            Login__();
+        }
+    }//GEN-LAST:event_userKeyPressed
+
+    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
+
+    }//GEN-LAST:event_userActionPerformed
+
+    private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
+        // TODO add your handling code here:
+
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            Login__();
+        }
+    }//GEN-LAST:event_passwordKeyPressed
+
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_cancelActionPerformed
-
-    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-
-              Login__();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginActionPerformed
-
-    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userActionPerformed
-
-    private void logoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_logoKeyPressed
-        // TODO add your handling code here:
-         
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-              Login__();
-        }
-        
-    }//GEN-LAST:event_logoKeyPressed
 
     private void loginKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginKeyReleased
 
-        
     }//GEN-LAST:event_loginKeyReleased
 
-    private void jPanel1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel1KeyReleased
-        // TODO add your handling code here:
-        
-                         
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-              Login__();
-        }
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
 
-    }//GEN-LAST:event_jPanel1KeyReleased
+        Login__();
+    }//GEN-LAST:event_loginActionPerformed
 
-    private void userKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userKeyPressed
-        // TODO add your handling code here:
-        
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-              Login__();
-        }
-    }//GEN-LAST:event_userKeyPressed
+    private void logoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_logoKeyPressed
 
-    private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
-        // TODO add your handling code here:
-        
-                
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-              Login__();
+            Login__();
         }
-    }//GEN-LAST:event_passwordKeyPressed
+    }//GEN-LAST:event_logoKeyPressed
+
+   
 
     
+    
     private void Login__(){
-        
-        int ID = 0;
-        try{
-        ID = Integer.parseInt(user.getText());
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(rootPane, "ارقام فقط");
-        }
-        
-        boolean EndOfTheLoop = false;
-        
-        for (int i = 0; i < data.getSize(); i++) {
-            if(ID == data.getinfo(i).getID()){
-                if( password.getText().equals(data.getinfo(i).getPassWord())){
-                    
-                                    home H = new home(data ,data.getinfo(i).getAuthorize());
-                                    H.setVisible(rootPaneCheckingEnabled);
-                                    this.setVisible(false);
-                                    break;
-                } 
 
-        }else {
-                if(i+1 == data.getSize()) EndOfTheLoop = true;
-                if (EndOfTheLoop) JOptionPane.showMessageDialog(rootPane, "كلمة المرور خاطئة" , "خطأ" , 0);
-            }
-                            
-            
+        for (int i = 0; i <= data.getUserSize() - 1; i++) {
+            System.out.println(i);
+            if(user.getText().equals(data.getUser(i).getUserName()) && password.getText().equals(data.getUser(i).getPassWord())){
+                
+                home H = new home(data ,data.getUser(i).getAuthorize());
+                         H.setVisible(rootPaneCheckingEnabled);
+                         this.setVisible(false);
+                         break;
+
+        }else if(i <= data.getUserSize() - 1)JOptionPane.showMessageDialog(rootPane, "كلمة المرور خاطئة" , "خطأ" , 0);                
         }
         
 

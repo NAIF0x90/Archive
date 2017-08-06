@@ -5,10 +5,15 @@
  */
 package archive;
 
+import Objects.Expensses;
+import Objects.EMP_INFO;
+import Objects.DataBaseManger;
 import java.awt.ComponentOrientation;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
@@ -38,20 +43,65 @@ public class home extends javax.swing.JFrame {
     private DataBaseManger data;
     private int Authorize;
     private int Cloumn;
+    private  ImageLabel image;
+    private String M_font = getClass().getClassLoader().getResource("res/Al-Mateen.ttf").getPath();
+    private String Doc = getClass().getClassLoader().getResource("res/Doc.png").getPath();
+
     
     public home(DataBaseManger data , int authorize) {
         initComponents();
         
         
-        String pathToImageSortBy = "archive/icon.png";
+        String pathToImageSortBy = "res/icon.png";
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
         this.setIconImage(img.getImage());   
     
+        ImageIcon BackGround = new ImageIcon(getClass().getClassLoader().getResource("res/home.jpg"));
+        
+        image = new ImageLabel("");
+        image.setIcon(BackGround);
+        image.setBounds(navHome1.getBounds());
+        navHome1.add(image);
+        
+        navHome1.addComponentListener(new ComponentListener() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                
+                image.setIcon(BackGround);
+                image.setBounds(navHome1.getBounds());
+                navHome1.add(image);
+                navHome1.repaint();
+                
+            }
+
+            @Override
+            public void componentMoved(ComponentEvent e) {
+            }
+
+            @Override
+            public void componentShown(ComponentEvent e) {
+            }
+
+            @Override
+            public void componentHidden(ComponentEvent e) {
+            }
+        });
+        
         
         this.data = data;
         this.Authorize = authorize;
 
-       DefaultTableModel model = new DefaultTableModel() {
+        
+        UpdateData();
+     
+    }
+
+
+    private void UpdateData(){
+        
+    data = new DataBaseManger();
+        
+        DefaultTableModel model = new DefaultTableModel() {
 
     @Override
     public boolean isCellEditable(int row, int column) {
@@ -62,9 +112,9 @@ public class home extends javax.swing.JFrame {
          EmpTable.setModel(model);
 
         // Create a couple of columns 
-        model.addColumn("PHONE");
-        model.addColumn("ID");
-        model.addColumn("NAME"); 
+        model.addColumn("الجوال");
+        model.addColumn("رقم الهوية");
+        model.addColumn("الاسم"); 
           
         for (int i = 0; i < data.getSize(); i++) {
         // Append a row 
@@ -116,13 +166,10 @@ public class home extends javax.swing.JFrame {
         ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
             
         }
-                
-                
         
-
+        
     }
-
-
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -143,7 +190,6 @@ public class home extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         nav2 = new javax.swing.JPanel();
         navHome1 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         navExpensesH1 = new javax.swing.JPanel();
         navExpansesH = new javax.swing.JPanel();
         navEmpHead = new javax.swing.JLabel();
@@ -171,18 +217,14 @@ public class home extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         NummberE = new javax.swing.JTextField();
         NameE = new javax.swing.JTextField();
         EmailE = new javax.swing.JTextField();
         MissionE = new javax.swing.JTextField();
-        ExecE = new javax.swing.JTextField();
         PerfE = new javax.swing.JTextField();
         RegiE = new javax.swing.JTextField();
         SaveEmp = new javax.swing.JButton();
         cancelEmp = new javax.swing.JButton();
-        jLabel22 = new javax.swing.JLabel();
-        Password = new javax.swing.JTextField();
         navEmployee = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         EmpInfo = new javax.swing.JTable();
@@ -243,18 +285,14 @@ public class home extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
         NummberE1 = new javax.swing.JTextField();
         NameE1 = new javax.swing.JTextField();
         EmailE1 = new javax.swing.JTextField();
         MissionE1 = new javax.swing.JTextField();
-        ExecE1 = new javax.swing.JTextField();
         PerfE1 = new javax.swing.JTextField();
         SaveEmp1 = new javax.swing.JButton();
         cancelEmp1 = new javax.swing.JButton();
-        jLabel35 = new javax.swing.JLabel();
-        Password1 = new javax.swing.JTextField();
-        ID = new javax.swing.JLabel();
+        ID = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ارشيف");
@@ -307,7 +345,7 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/logo.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/logo.png"))); // NOI18N
 
         jLabel32.setBackground(new java.awt.Color(51, 51, 51));
         jLabel32.setFont(new java.awt.Font("AdvertisingBold", 0, 10)); // NOI18N
@@ -352,23 +390,15 @@ public class home extends javax.swing.JFrame {
 
         navHome1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/home.jpg"))); // NOI18N
-
         javax.swing.GroupLayout navHome1Layout = new javax.swing.GroupLayout(navHome1);
         navHome1.setLayout(navHome1Layout);
         navHome1Layout.setHorizontalGroup(
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navHome1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 722, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 691, Short.MAX_VALUE)
         );
         navHome1Layout.setVerticalGroup(
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(navHome1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 714, Short.MAX_VALUE)
         );
 
         nav2.add(navHome1, "card2");
@@ -423,7 +453,7 @@ public class home extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpansesHLayout.createSequentialGroup()
                         .addComponent(navEmpHead)
                         .addGap(143, 143, 143))))
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
         );
         navExpansesHLayout.setVerticalGroup(
             navExpansesHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,7 +471,7 @@ public class home extends javax.swing.JFrame {
         navExpensesH1.setLayout(navExpensesH1Layout);
         navExpensesH1Layout.setHorizontalGroup(
             navExpensesH1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 752, Short.MAX_VALUE)
+            .addGap(0, 691, Short.MAX_VALUE)
             .addGroup(navExpensesH1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(navExpensesH1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -510,9 +540,9 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(navEmployeeHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(navEmployeeHLayout.createSequentialGroup()
-                        .addGap(0, 645, Short.MAX_VALUE)
+                        .addGap(0, 584, Short.MAX_VALUE)
                         .addComponent(EmpAdd))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeHLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -576,7 +606,7 @@ public class home extends javax.swing.JFrame {
         navProgzLayout.setHorizontalGroup(
             navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navProgzLayout.createSequentialGroup()
-                .addContainerGap(461, Short.MAX_VALUE)
+                .addContainerGap(400, Short.MAX_VALUE)
                 .addGroup(navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navProgzLayout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -638,9 +668,6 @@ public class home extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
         jLabel17.setText("المسمى الوظيفي");
 
-        jLabel18.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
-        jLabel18.setText("نسبة انجاز العمل");
-
         NameE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NameEActionPerformed(evt);
@@ -665,48 +692,36 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
-        jLabel22.setText("     كلمة المرور");
-
         javax.swing.GroupLayout navEmployeeAddLayout = new javax.swing.GroupLayout(navEmployeeAdd);
         navEmployeeAdd.setLayout(navEmployeeAddLayout);
         navEmployeeAddLayout.setHorizontalGroup(
             navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navEmployeeAddLayout.createSequentialGroup()
-                .addContainerGap(430, Short.MAX_VALUE)
+                .addContainerGap(369, Short.MAX_VALUE)
                 .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeAddLayout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addGap(145, 145, 145))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeAddLayout.createSequentialGroup()
-                        .addComponent(cancelEmp)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SaveEmp)
-                        .addGap(136, 136, 136))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeAddLayout.createSequentialGroup()
-                        .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(navEmployeeAddLayout.createSequentialGroup()
-                                .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(navEmployeeAddLayout.createSequentialGroup()
-                                .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(NummberE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ExecE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(PerfE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(MissionE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(EmailE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NameE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RegiE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel18))))
+                                .addComponent(cancelEmp)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(SaveEmp))
+                            .addComponent(NummberE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PerfE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MissionE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmailE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NameE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RegiE, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel17))
                         .addGap(25, 25, 25))))
         );
         navEmployeeAddLayout.setVerticalGroup(
@@ -738,19 +753,11 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(PerfE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(ExecE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel22)
-                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(18, 18, 18)
                 .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveEmp)
                     .addComponent(cancelEmp))
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addContainerGap(378, Short.MAX_VALUE))
         );
 
         nav2.add(navEmployeeAdd, "card2");
@@ -776,7 +783,7 @@ public class home extends javax.swing.JFrame {
         EmpInfo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(EmpInfo);
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/logo.png"))); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/logo.png"))); // NOI18N
 
         jLabel20.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
         jLabel20.setText("ادارة التعليم بمحافظة عفيف - قسم تقنية المعلومات");
@@ -828,11 +835,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE))
-                    .addGroup(navEmployeeLayout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jLabel19)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE))
                     .addGroup(navEmployeeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(PrintEM)
@@ -856,13 +859,17 @@ public class home extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
                                 .addComponent(jLabel21)
                                 .addGap(146, 146, 146))))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(244, 244, 244))
         );
         navEmployeeLayout.setVerticalGroup(
             navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel20)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel21)
@@ -871,7 +878,7 @@ public class home extends javax.swing.JFrame {
                     .addComponent(EditEm)
                     .addComponent(DelEm))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PrintEM)
@@ -933,7 +940,7 @@ public class home extends javax.swing.JFrame {
         navExpensesِAddLayout.setHorizontalGroup(
             navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navExpensesِAddLayout.createSequentialGroup()
-                .addContainerGap(444, Short.MAX_VALUE)
+                .addContainerGap(383, Short.MAX_VALUE)
                 .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
                         .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1026,7 +1033,7 @@ public class home extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(ExpShow);
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/archive/logo.png"))); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/logo.png"))); // NOI18N
 
         jLabel30.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
         jLabel30.setText("ادارة التعليم بمحافظة عفيف - قسم تقنية المعلومات");
@@ -1074,10 +1081,6 @@ public class home extends javax.swing.JFrame {
         navExpensesِ.setLayout(navExpensesِLayout);
         navExpensesِLayout.setHorizontalGroup(
             navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel29)
-                .addGap(110, 110, 110))
             .addGroup(navExpensesِLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1092,7 +1095,7 @@ public class home extends javax.swing.JFrame {
                                 .addGap(146, 146, 146))))
                     .addGroup(navExpensesِLayout.createSequentialGroup()
                         .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
                             .addGroup(navExpensesِLayout.createSequentialGroup()
                                 .addComponent(jButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1102,17 +1105,21 @@ public class home extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(EditEx)))
                         .addContainerGap())))
+            .addGroup(navExpensesِLayout.createSequentialGroup()
+                .addGap(243, 243, 243)
+                .addComponent(jLabel29)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         navExpensesِLayout.setVerticalGroup(
             navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addContainerGap()
                 .addComponent(jLabel29)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel30)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel31)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EditEx)
                     .addComponent(DelEx))
@@ -1122,7 +1129,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(cancelExp))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         nav2.add(navExpensesِ, "card2");
@@ -1176,7 +1183,7 @@ public class home extends javax.swing.JFrame {
         navExpensesِEditLayout.setHorizontalGroup(
             navExpensesِEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navExpensesِEditLayout.createSequentialGroup()
-                .addContainerGap(444, Short.MAX_VALUE)
+                .addContainerGap(383, Short.MAX_VALUE)
                 .addGroup(navExpensesِEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِEditLayout.createSequentialGroup()
                         .addGroup(navExpensesِEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -1268,9 +1275,6 @@ public class home extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
         jLabel33.setText("المسمى الوظيفي");
 
-        jLabel34.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
-        jLabel34.setText("نسبة انجاز العمل");
-
         NameE1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NameE1ActionPerformed(evt);
@@ -1295,50 +1299,46 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        jLabel35.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
-        jLabel35.setText("     كلمة المرور");
-
-        ID.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout navEmployeeEditLayout = new javax.swing.GroupLayout(navEmployeeEdit);
         navEmployeeEdit.setLayout(navEmployeeEditLayout);
         navEmployeeEditLayout.setHorizontalGroup(
             navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navEmployeeEditLayout.createSequentialGroup()
-                .addContainerGap(430, Short.MAX_VALUE)
+                .addContainerGap(369, Short.MAX_VALUE)
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeEditLayout.createSequentialGroup()
                         .addComponent(jLabel23)
                         .addGap(145, 145, 145))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeEditLayout.createSequentialGroup()
-                        .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(navEmployeeEditLayout.createSequentialGroup()
                                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(NummberE1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                    .addComponent(ExecE1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                                     .addComponent(PerfE1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                                     .addComponent(MissionE1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                                     .addComponent(EmailE1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                                     .addComponent(NameE1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                    .addComponent(ID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(ID))
                                 .addGap(18, 18, 18)
                                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel24)
                                     .addComponent(jLabel26)
                                     .addComponent(jLabel25)
                                     .addComponent(jLabel27)
                                     .addComponent(jLabel28)
                                     .addComponent(jLabel33)
-                                    .addComponent(jLabel34)))
-                            .addGroup(navEmployeeEditLayout.createSequentialGroup()
-                                .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(navEmployeeEditLayout.createSequentialGroup()
-                                        .addComponent(cancelEmp1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(SaveEmp1))
-                                    .addComponent(Password1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)))
+                                        .addGap(19, 19, 19)
+                                        .addComponent(jLabel24))))
+                            .addGroup(navEmployeeEditLayout.createSequentialGroup()
+                                .addComponent(cancelEmp1)
+                                .addGap(89, 89, 89)
+                                .addComponent(SaveEmp1)))
                         .addGap(25, 25, 25))))
         );
         navEmployeeEditLayout.setVerticalGroup(
@@ -1350,13 +1350,10 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(NameE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(navEmployeeEditLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel25))
-                    .addGroup(navEmployeeEditLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ID, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)))
+                .addGap(15, 15, 15)
+                .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
@@ -1373,19 +1370,11 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
                     .addComponent(PerfE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(ExecE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
-                    .addComponent(Password1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(32, 32, 32)
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveEmp1)
                     .addComponent(cancelEmp1))
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addContainerGap(367, Short.MAX_VALUE))
         );
 
         nav2.add(navEmployeeEdit, "card2");
@@ -1438,34 +1427,32 @@ public class home extends javax.swing.JFrame {
         emp.setName(NameE1.getText());
         emp.setEmail(EmailE1.getText());
         emp.setJob(MissionE1.getText());
-        emp.setPassWord(Password1.getText());
-        emp.setSuccess(Double.parseDouble(ExecE1.getText()));
         emp.setSection(PerfE1.getText());
         emp.setPhone(NummberE1.getText());
         emp.setID(Integer.parseInt(ID.getText()));
         
         data.UpdateUser(emp);
-        
-        ID.setText(data.getinfo(Cloumn).getID()+"");
+        UpdateData();
+
+        ID.setText("");
         NameE1.setText("");
         EmailE1.setText("");
         MissionE1.setText("");
-        Password1.setText("");
-        ExecE1.setText("");
         PerfE1.setText("");
         NummberE1.setText("");
         
+
         
         nav2.removeAll();
         nav2.repaint();
         nav2.revalidate();
         //adding panel
-        nav2.add(navEmployee);
+        nav2.add(navEmployeeH);
         nav2.repaint();
         nav2.revalidate();
         
         JOptionPane.showMessageDialog(rootPane, "تم التعديل ");
-        
+
     }//GEN-LAST:event_SaveEmp1ActionPerformed
 
     private void NameE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameE1ActionPerformed
@@ -1502,6 +1489,8 @@ public class home extends javax.swing.JFrame {
         
         data.UpdateExp(exp);
         
+        
+        UpdateData();
         
         nav2.removeAll();
         nav2.repaint();
@@ -1551,7 +1540,7 @@ public class home extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        MessageFormat header = new MessageFormat ("heade.png");
+        MessageFormat header = new MessageFormat ("res/heade.png");
         MessageFormat footer = new MessageFormat("report frint");
         try {
             ExpShow.print(JTable.PrintMode.NORMAL, header, footer);
@@ -1595,46 +1584,17 @@ public class home extends javax.swing.JFrame {
         SerNum2.setText("");
         CompN2.setText("");
         MissionE2.setText("");
+            
+        UpdateData();
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpansesH);
+        nav2.repaint();
+        nav2.revalidate();
 
-        data = new DataBaseManger();
-
-        DefaultTableModel Emodel = new DefaultTableModel() {
-
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                //all cells false
-                return false;
-            }
-        };
-        ExpensesTable.setModel(Emodel);
-
-        // Create a couple of columns
-        Emodel.addColumn("الشركة ");
-        Emodel.addColumn("الاسم");
-
-        for (int i = 0; i < data.getExpSize(); i++) {
-            Emodel.addRow(new Object[] {data.getExp(i).getCompany() , data.getExp(i).getName()});
-
-        }
-
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) ExpensesTable.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-
-        for(int i = 0; i < 2; i++){
-
-            DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-            rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-            ExpensesTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-
-            nav2.removeAll();
-            nav2.repaint();
-            nav2.revalidate();
-            //adding panel
-            nav2.add(navExpansesH);
-            nav2.repaint();
-            nav2.revalidate();
-
-        }
+      
     }//GEN-LAST:event_SaveExp2ActionPerformed
 
     private void SerNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SerNum2ActionPerformed
@@ -1642,7 +1602,25 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_SerNum2ActionPerformed
 
     private void DelEmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DelEmActionPerformed
-  
+
+                int i = JOptionPane.showConfirmDialog(rootPane, "هل انت متأكد من رغبتك بحذف بيانات الموظف ؟", "تحذير", 0, 0);
+                if(i == 0){
+                    UpdateData();
+                    data.Delete(data.getinfo(Cloumn).getID());
+
+                    UpdateData();
+                    
+                    nav2.removeAll();
+                    nav2.repaint();
+                    nav2.revalidate();
+                    //adding panel
+                    nav2.add(navEmployeeH);
+                    nav2.repaint();
+                    nav2.revalidate();
+
+                    JOptionPane.showMessageDialog(rootPane, "تم حذف بيانات الموظف");
+                }
+        
     }//GEN-LAST:event_DelEmActionPerformed
 
     private void EditEmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditEmActionPerformed
@@ -1652,8 +1630,6 @@ public class home extends javax.swing.JFrame {
         NameE1.setText(data.getinfo(Cloumn).getName());
         EmailE1.setText(data.getinfo(Cloumn).getEmail());
         MissionE1.setText(data.getinfo(Cloumn).getJob());
-        Password1.setText(data.getinfo(Cloumn).getPassWord());
-        ExecE1.setText(data.getinfo(Cloumn).getSuccess()+"");
         PerfE1.setText(data.getinfo(Cloumn).getSection());
         NummberE1.setText(data.getinfo(Cloumn).getPhone());
         
@@ -1680,6 +1656,10 @@ public class home extends javax.swing.JFrame {
 
     private void PrintEMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintEMActionPerformed
         // TODO add your handling code here:
+        
+        Document doc = new Document(Doc, M_font);
+        doc.PrintEmployeeInfo(data.getinfo(Cloumn));
+        
     }//GEN-LAST:event_PrintEMActionPerformed
 
     private void cancelEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelEmpActionPerformed
@@ -1704,8 +1684,6 @@ public class home extends javax.swing.JFrame {
         emp.setPhone(NummberE.getText());
         emp.setSection(MissionE.getText());
         emp.setJob(PerfE.getText());
-        emp.setSuccess(Double.parseDouble(ExecE.getText()));
-        emp.setPassWord(Password.getText());
 
         data.AddUser(emp);
 
@@ -1715,42 +1693,9 @@ public class home extends javax.swing.JFrame {
         NummberE.setText("");
         MissionE.setText("");
         PerfE.setText("");
-        ExecE.setText("");
-        Password.setText("");
 
-        data = new DataBaseManger();
-
-        DefaultTableModel model = new DefaultTableModel() {
-
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                //all cells false
-                return false;
-            }
-        };
-        EmpTable.setModel(model);
-
-        // Create a couple of columns
-        model.addColumn("PHONE");
-        model.addColumn("ID");
-        model.addColumn("NAME");
-
-        for (int i = 0; i < data.getSize(); i++) {
-            // Append a row
-            model.addRow(new Object[]{data.getinfo(i).getPhone(), data.getinfo(i).getID() , data.getinfo(i).getName()});
-
-        }
-
-        for(int i = 0; i< EmpTable.getColumnCount(); i++){
-
-            DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-            rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-            EmpTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-        }
-
-        DefaultTableCellRenderer renderer = (DefaultTableCellRenderer) EmpTable.getTableHeader().getDefaultRenderer();
-        renderer.setHorizontalAlignment(0);
-
+        UpdateData();
+        
         nav2.removeAll();
         nav2.repaint();
         nav2.revalidate();
@@ -1843,7 +1788,6 @@ public class home extends javax.swing.JFrame {
         Emodel.addRow(new Object[] {data.getinfo(column).getPhone()     , "رقم الجوال"});
         Emodel.addRow(new Object[] {data.getinfo(column).getJob()       , "المسمى الوظيفي"});
         Emodel.addRow(new Object[] {data.getinfo(column).getSection()   , "القسم"});
-        Emodel.addRow(new Object[] {data.getinfo(column).getSuccess()   , "الاداء الوظيفي"});
         Emodel.addRow(new Object[] {data.getinfo(column).getEmail()     , "البريد الالكتروني "});
 
         for(int i = 0; i < 2; i++){
@@ -1854,18 +1798,7 @@ public class home extends javax.swing.JFrame {
 
         }
         
-        DelEm.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                int i = JOptionPane.showConfirmDialog(rootPane, "هل انت متأكد من رغبتك بحذف بيانات الموظف ؟", "تحذير", 0, 0);
-                if(i == 0){
-                    data.Delete(data.getinfo(column).getID());
-                    JOptionPane.showMessageDialog(rootPane, "تم حذف بيانات الموظف");
-                }
-                
-            }
-        });
+        
     }//GEN-LAST:event_EmpTableMouseClicked
 
     private void EmpAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpAddActionPerformed
@@ -1957,6 +1890,7 @@ public class home extends javax.swing.JFrame {
         nav2.add(navExpensesِAdd);
         nav2.repaint();
         nav2.revalidate();
+        
     }//GEN-LAST:event_ExpAdd1ActionPerformed
 
     private void progzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_progzActionPerformed
@@ -2007,6 +1941,10 @@ public class home extends javax.swing.JFrame {
         nav2.revalidate();
     }//GEN-LAST:event_homeActionPerformed
 
+    private void IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDActionPerformed
+
     
     
     
@@ -2030,12 +1968,10 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton EmpAdd;
     private javax.swing.JTable EmpInfo;
     private javax.swing.JTable EmpTable;
-    private javax.swing.JTextField ExecE;
-    private javax.swing.JTextField ExecE1;
     private javax.swing.JButton ExpAdd1;
     private javax.swing.JTable ExpShow;
     private javax.swing.JTable ExpensesTable;
-    private javax.swing.JLabel ID;
+    private javax.swing.JTextField ID;
     private javax.swing.JTextField MissionE;
     private javax.swing.JTextField MissionE1;
     private javax.swing.JTextField MissionE2;
@@ -2052,8 +1988,6 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JTextField NameE1;
     private javax.swing.JTextField NummberE;
     private javax.swing.JTextField NummberE1;
-    private javax.swing.JTextField Password;
-    private javax.swing.JTextField Password1;
     private javax.swing.JTextField PerfE;
     private javax.swing.JTextField PerfE1;
     private javax.swing.JButton PrintEM;
@@ -2085,12 +2019,10 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2103,11 +2035,8 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
