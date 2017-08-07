@@ -68,7 +68,7 @@ public class DataBaseManger {
 			while(rs.next()){
 				EMP_INFO emp = new EMP_INFO();
 				
-				emp.setID(rs.getInt("ID"));
+				emp.setID(rs.getString("ID"));
 				emp.setName(rs.getString("Name"));
 				emp.setSection(rs.getString("Section"));
                                 emp.setPhone(rs.getString("Phone"));
@@ -183,7 +183,7 @@ public class DataBaseManger {
 		
 		 String Create_Table = "CREATE TABLE Employee(" +  
 				 "Ecount int AUTO_INCREMENT,"+
-				 "ID int PRIMARY KEY,"+
+				 "ID CHARACTER ,"+
 				 "Section CHARACTER," +
 				 "Name CHARACTER,"+
                                  "Phone CHARACTER,"+
@@ -288,7 +288,7 @@ public class DataBaseManger {
 		
 	}
         
-	public void Delete(int id){
+	public void Delete(String id){
 		
 		try {
 			if(connect.isClosed())

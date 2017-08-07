@@ -5,7 +5,7 @@ public class EMP_INFO {
 
 	private String Name;
 	private String Section;
-	private int ID;
+	private String ID;
         private String Phone;
         private String Job;
         private String Email;
@@ -41,15 +41,6 @@ public class EMP_INFO {
 
 
 
-	public int getID() {
-		return ID;
-	}
-
-
-
-	public void setID(int iD) {
-		ID = iD;
-	}
 
 
     /**
@@ -92,6 +83,20 @@ public class EMP_INFO {
      */
     public void setEmail(String Email) {
         this.Email = Email;
+    }
+
+    /**
+     * @return the ID
+     */
+    public String getID() {
+        return ID;
+    }
+
+    /**
+     * @param ID the ID to set
+     */
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     /**

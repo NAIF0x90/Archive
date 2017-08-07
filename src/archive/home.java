@@ -1429,7 +1429,7 @@ public class home extends javax.swing.JFrame {
         emp.setJob(MissionE1.getText());
         emp.setSection(PerfE1.getText());
         emp.setPhone(NummberE1.getText());
-        emp.setID(Integer.parseInt(ID.getText()));
+        emp.setID(ID.getText());
         
         data.UpdateUser(emp);
         UpdateData();
@@ -1626,7 +1626,7 @@ public class home extends javax.swing.JFrame {
     private void EditEmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditEmActionPerformed
         
         
-        ID.setText(data.getinfo(Cloumn).getID()+"");
+        ID.setText(data.getinfo(Cloumn).getID());
         NameE1.setText(data.getinfo(Cloumn).getName());
         EmailE1.setText(data.getinfo(Cloumn).getEmail());
         MissionE1.setText(data.getinfo(Cloumn).getJob());
@@ -1679,7 +1679,7 @@ public class home extends javax.swing.JFrame {
 
         EMP_INFO emp = new EMP_INFO();
         emp.setName(NameE.getText());
-        emp.setID(Integer.parseInt(RegiE.getText()));
+        emp.setID(RegiE.getText());
         emp.setEmail(EmailE.getText());
         emp.setPhone(NummberE.getText());
         emp.setSection(MissionE.getText());

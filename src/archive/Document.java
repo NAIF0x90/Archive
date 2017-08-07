@@ -87,6 +87,9 @@ public class Document {
         TEXTPOSITON_H += Sepr;
         g.drawString(P , TEXTPOSITON_W - g.getFontMetrics().stringWidth(P), TEXTPOSITON_H);        
         g.dispose();
+        
+        new Thread(new PrintActionListener(image)).start();         
+        
         ImageIO.write(image, "png", new File("C:\\Users\\NAIF\\Documents\\ArchiveStored\\test.png"));
         
         System.out.println("Document Have Bean Printed");
