@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 
 
 
@@ -31,19 +32,14 @@ public class Document {
      
         try{
         
-   Font ttfBase = null;
-		try {
+                        Font ttfBase = null;
 			InputStream myStream = new BufferedInputStream(new FileInputStream(FontPath));
 			ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
 			ttfReal = ttfBase.deriveFont(Font.PLAIN, 24);
-		} catch (Exception ex) {
-	        ex.printStackTrace();
-	        System.err.println("Font not loaded.");
-	    }
    
    
 
-    image = ImageIO.read(new File(ImagePath));
+        image = ImageIO.read(new File(ImagePath));
 
         g = image.getGraphics();
         g.setColor(Color.BLACK);
@@ -89,7 +85,6 @@ public class Document {
         g.dispose();
         
         new Thread(new PrintActionListener(image)).start();         
-        
         System.out.println("Document Have Bean Printed");
 
             

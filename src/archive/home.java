@@ -8,7 +8,6 @@ package archive;
 import Objects.Expensses;
 import Objects.EMP_INFO;
 import Objects.DataBaseManger;
-import java.awt.ComponentOrientation;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -44,13 +43,16 @@ public class home extends javax.swing.JFrame {
     private int Authorize;
     private int Cloumn;
     private  ImageLabel image;
-    private String M_font = getClass().getClassLoader().getResource("res/Al-Mateen.ttf").getPath();
-    private String Doc = getClass().getClassLoader().getResource("res/Doc.png").getPath();
+    private String M_font;// = getClass().getClassLoader().getResource("res/M.ttf").toString();
+    private String Doc; // = getClass().getClassLoader().getResource("res/Doc.png").toString();
 
     
     public home(DataBaseManger data , int authorize) {
         initComponents();
         
+        
+        M_font = getClass().getClassLoader().getResource("res/M.ttf").getFile();
+        Doc = getClass().getClassLoader().getResource("res/Doc.png").getFile();
         
         this.setAutoRequestFocus(true);
         this.setLocationRelativeTo(null);  // *** this will center your app ***
