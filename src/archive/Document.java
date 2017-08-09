@@ -90,8 +90,6 @@ public class Document {
         
         new Thread(new PrintActionListener(image)).start();         
         
-        ImageIO.write(image, "png", new File("C:\\Users\\NAIF\\Documents\\ArchiveStored\\test.png"));
-        
         System.out.println("Document Have Bean Printed");
 
             

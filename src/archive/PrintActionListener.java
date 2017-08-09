@@ -52,14 +52,16 @@ public class PrintActionListener implements Runnable {
             if (pageIndex == 0) {
                 int pWidth = 0;
                 int pHeight = 0;
+                int PosX = 70;
+                int PosY = 70;
                 if (orientation == PageFormat.PORTRAIT) {
-                    pWidth = (int) Math.min(width, (double) image.getWidth());
-                    pHeight = pWidth * image.getHeight() / image.getWidth();
+                    pWidth = PosX + (int) Math.min(width, (double) image.getWidth());
+                    pHeight = PosY + pWidth * image.getHeight() / image.getWidth();
                 } else {
                     pHeight = (int) Math.min(width, (double) image.getHeight());
                     pWidth = pHeight * image.getWidth() / image.getHeight();
                 }
-                g.drawImage(image, (int) x, (int) y, pWidth, pHeight, null);
+                g.drawImage(image, (int) x - PosX, (int) y - PosY, pWidth + 70, pHeight + 30, null);
                 return PAGE_EXISTS;
             } else {
                 return NO_SUCH_PAGE;

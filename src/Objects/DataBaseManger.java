@@ -324,6 +324,26 @@ public class DataBaseManger {
 		}
 		
 	}
+        
+        public void UpdateUserID(EMP_INFO emp){
+            
+            
+            		
+		try {
+			if(connect.isClosed())
+				Connect();
+			
+			String AddQury = "UPDATE `Employee` SET `ID` = '" +  emp.getID() + "' WHERE `Name` = '" + emp.getName() + "';";
+			
+			connect.createStatement().execute(AddQury);
+			System.out.println("Data has Bean Added");
+			
+			Close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+            
+        }
                 
         public void AddExp(Expensses exp){
 		

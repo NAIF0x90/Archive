@@ -25,6 +25,10 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
     
+        this.setAutoRequestFocus(true);
+        this.setLocationRelativeTo(null);  // *** this will center your app ***
+        
+        
         String pathToImageSortBy = "res/icon.png";
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
         this.setIconImage(img.getImage());   

@@ -52,6 +52,9 @@ public class home extends javax.swing.JFrame {
         initComponents();
         
         
+        this.setAutoRequestFocus(true);
+        this.setLocationRelativeTo(null);  // *** this will center your app ***
+        
         String pathToImageSortBy = "res/icon.png";
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
         this.setIconImage(img.getImage());   
@@ -1431,7 +1434,9 @@ public class home extends javax.swing.JFrame {
         emp.setPhone(NummberE1.getText());
         emp.setID(ID.getText());
         
+        
         data.UpdateUser(emp);
+        data.UpdateUserID(emp);
         UpdateData();
 
         ID.setText("");
@@ -1685,6 +1690,12 @@ public class home extends javax.swing.JFrame {
         emp.setSection(MissionE.getText());
         emp.setJob(PerfE.getText());
 
+        if(emp.getName().length() == 0 || emp.getID().length() == 0 
+                || emp.getEmail().length() == 0 || emp.getJob().length() == 0 
+                || emp.getPhone().length() == 0 || emp.getSection().length() == 0){
+        JOptionPane.showMessageDialog(rootPane, "يجب ان يتم ملء كل الحقول  ", "خطأ" , 0);    
+        } else {
+        
         data.AddUser(emp);
 
         NameE.setText("");
@@ -1703,6 +1714,9 @@ public class home extends javax.swing.JFrame {
         nav2.add(navEmployeeH);
         nav2.repaint();
         nav2.revalidate();
+        
+        }
+
     }//GEN-LAST:event_SaveEmpActionPerformed
 
     private void NameEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameEActionPerformed
