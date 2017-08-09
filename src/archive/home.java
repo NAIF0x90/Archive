@@ -186,6 +186,7 @@ public class home extends javax.swing.JFrame {
         employee = new javax.swing.JButton();
         expenses = new javax.swing.JButton();
         progz = new javax.swing.JButton();
+        users = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         nav2 = new javax.swing.JPanel();
@@ -196,6 +197,7 @@ public class home extends javax.swing.JFrame {
         ExpAdd1 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         ExpensesTable = new javax.swing.JTable();
+        ExpAdd2 = new javax.swing.JButton();
         navEmployeeH = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         EmpAdd = new javax.swing.JButton();
@@ -235,7 +237,7 @@ public class home extends javax.swing.JFrame {
         cancelEm = new javax.swing.JButton();
         EditEm = new javax.swing.JButton();
         DelEm = new javax.swing.JButton();
-        navExpensesِAdd = new javax.swing.JPanel();
+        navExpensesِAdd2 = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         Count = new javax.swing.JLabel();
         Model = new javax.swing.JLabel();
@@ -293,6 +295,49 @@ public class home extends javax.swing.JFrame {
         SaveEmp1 = new javax.swing.JButton();
         cancelEmp1 = new javax.swing.JButton();
         ID = new javax.swing.JTextField();
+        navUsers = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        UserAdd = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        UserTable = new javax.swing.JTable();
+        navUsersAdd = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        NameUserAdd = new javax.swing.JTextField();
+        SaveUserAdd = new javax.swing.JButton();
+        cancelUserAdd = new javax.swing.JButton();
+        PasswordUserAdd = new javax.swing.JPasswordField();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        power = new javax.swing.JComboBox<>();
+        navExpensesِAdd = new javax.swing.JPanel();
+        title2 = new javax.swing.JLabel();
+        SaveExpAdd = new javax.swing.JButton();
+        cancelExpAdd = new javax.swing.JButton();
+        Name4 = new javax.swing.JLabel();
+        NameEXH2 = new javax.swing.JTextField();
+        navExpensesH2 = new javax.swing.JPanel();
+        navEmpHead1 = new javax.swing.JLabel();
+        ExpH2Add2 = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        ExpensesH2Table1 = new javax.swing.JTable();
+        navUserH = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        EmpInfo1 = new javax.swing.JTable();
+        jLabel35 = new javax.swing.JLabel();
+        cancelUserH = new javax.swing.JButton();
+        EditUserH = new javax.swing.JButton();
+        DelUserH = new javax.swing.JButton();
+        navUsersEdit = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        NameUserEdit = new javax.swing.JTextField();
+        SaveUserEdit = new javax.swing.JButton();
+        cancelUserEdit = new javax.swing.JButton();
+        PasswordUserEdit = new javax.swing.JPasswordField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        power1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ارشيف");
@@ -345,6 +390,17 @@ public class home extends javax.swing.JFrame {
             }
         });
 
+        users.setBackground(new java.awt.Color(102, 204, 255));
+        users.setFont(new java.awt.Font("AdvertisingBold", 0, 11)); // NOI18N
+        users.setText("المستخدمين");
+        users.setMaximumSize(new java.awt.Dimension(73, 23));
+        users.setMinimumSize(new java.awt.Dimension(73, 23));
+        users.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usersActionPerformed(evt);
+            }
+        });
+
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/logo.png"))); // NOI18N
 
         jLabel32.setBackground(new java.awt.Color(51, 51, 51));
@@ -359,15 +415,16 @@ public class home extends javax.swing.JFrame {
         nav1Layout.setHorizontalGroup(
             nav1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nav1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(nav1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(progz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(expenses, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(employee, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(home, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(nav1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(progz, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(expenses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(employee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(home, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(users, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         nav1Layout.setVerticalGroup(
             nav1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,12 +432,14 @@ public class home extends javax.swing.JFrame {
                 .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
+                .addGap(1, 1, 1)
                 .addComponent(employee, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(expenses, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(progz, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(users, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel32))
         );
@@ -394,7 +453,7 @@ public class home extends javax.swing.JFrame {
         navHome1.setLayout(navHome1Layout);
         navHome1Layout.setHorizontalGroup(
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 691, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
         navHome1Layout.setVerticalGroup(
             navHome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,7 +489,7 @@ public class home extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "الشركة ", "الاسم"
             }
         ));
         ExpensesTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -440,20 +499,29 @@ public class home extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(ExpensesTable);
 
+        ExpAdd2.setBackground(new java.awt.Color(102, 204, 255));
+        ExpAdd2.setFont(new java.awt.Font("AdvertisingBold", 0, 10)); // NOI18N
+        ExpAdd2.setText("رجوع");
+        ExpAdd2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExpAdd2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout navExpansesHLayout = new javax.swing.GroupLayout(navExpansesH);
         navExpansesH.setLayout(navExpansesHLayout);
         navExpansesHLayout.setHorizontalGroup(
             navExpansesHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navExpansesHLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(navExpansesHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpansesHLayout.createSequentialGroup()
-                        .addComponent(ExpAdd1)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpansesHLayout.createSequentialGroup()
-                        .addComponent(navEmpHead)
-                        .addGap(143, 143, 143))))
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                .addComponent(navEmpHead)
+                .addGap(143, 143, 143))
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpansesHLayout.createSequentialGroup()
+                .addComponent(ExpAdd2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ExpAdd1)
+                .addContainerGap())
         );
         navExpansesHLayout.setVerticalGroup(
             navExpansesHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -461,7 +529,9 @@ public class home extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addComponent(navEmpHead)
                 .addGap(18, 18, 18)
-                .addComponent(ExpAdd1)
+                .addGroup(navExpansesHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ExpAdd1)
+                    .addComponent(ExpAdd2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -471,7 +541,7 @@ public class home extends javax.swing.JFrame {
         navExpensesH1.setLayout(navExpensesH1Layout);
         navExpensesH1Layout.setHorizontalGroup(
             navExpensesH1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 691, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
             .addGroup(navExpensesH1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(navExpensesH1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -540,9 +610,9 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(navEmployeeHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(navEmployeeHLayout.createSequentialGroup()
-                        .addGap(0, 584, Short.MAX_VALUE)
+                        .addGap(0, 627, Short.MAX_VALUE)
                         .addComponent(EmpAdd))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeHLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -557,7 +627,7 @@ public class home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(EmpAdd)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -606,7 +676,7 @@ public class home extends javax.swing.JFrame {
         navProgzLayout.setHorizontalGroup(
             navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navProgzLayout.createSequentialGroup()
-                .addContainerGap(400, Short.MAX_VALUE)
+                .addContainerGap(433, Short.MAX_VALUE)
                 .addGroup(navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navProgzLayout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -640,7 +710,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navProgzLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(farsbutton))
-                .addContainerGap(510, Short.MAX_VALUE))
+                .addContainerGap(526, Short.MAX_VALUE))
         );
 
         nav2.add(navProgz, "card2");
@@ -697,7 +767,7 @@ public class home extends javax.swing.JFrame {
         navEmployeeAddLayout.setHorizontalGroup(
             navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navEmployeeAddLayout.createSequentialGroup()
-                .addContainerGap(369, Short.MAX_VALUE)
+                .addContainerGap(384, Short.MAX_VALUE)
                 .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeAddLayout.createSequentialGroup()
                         .addComponent(jLabel11)
@@ -757,7 +827,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navEmployeeAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveEmp)
                     .addComponent(cancelEmp))
-                .addContainerGap(378, Short.MAX_VALUE))
+                .addContainerGap(405, Short.MAX_VALUE))
         );
 
         nav2.add(navEmployeeAdd, "card2");
@@ -831,25 +901,13 @@ public class home extends javax.swing.JFrame {
         navEmployee.setLayout(navEmployeeLayout);
         navEmployeeLayout.setHorizontalGroup(
             navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(navEmployeeLayout.createSequentialGroup()
-                .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE))
-                    .addGroup(navEmployeeLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(PrintEM)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cancelEm)))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(244, 244, 244))
+            .addGroup(navEmployeeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
-                        .addComponent(DelEm)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(EditEm)
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -858,11 +916,19 @@ public class home extends javax.swing.JFrame {
                                 .addGap(78, 78, 78))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
                                 .addComponent(jLabel21)
-                                .addGap(146, 146, 146))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel19)
-                .addGap(244, 244, 244))
+                                .addGap(146, 146, 146))))
+                    .addGroup(navEmployeeLayout.createSequentialGroup()
+                        .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                            .addGroup(navEmployeeLayout.createSequentialGroup()
+                                .addComponent(PrintEM)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cancelEm))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeLayout.createSequentialGroup()
+                                .addComponent(DelEm)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(EditEm)))
+                        .addContainerGap())))
         );
         navEmployeeLayout.setVerticalGroup(
             navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -878,7 +944,7 @@ public class home extends javax.swing.JFrame {
                     .addComponent(EditEm)
                     .addComponent(DelEm))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(navEmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PrintEM)
@@ -888,7 +954,7 @@ public class home extends javax.swing.JFrame {
 
         nav2.add(navEmployee, "card2");
 
-        navExpensesِAdd.setBackground(new java.awt.Color(255, 255, 255));
+        navExpensesِAdd2.setBackground(new java.awt.Color(255, 255, 255));
 
         title.setFont(new java.awt.Font("AdvertisingBold", 0, 18)); // NOI18N
         title.setText("اضافة مصروفات");
@@ -935,15 +1001,15 @@ public class home extends javax.swing.JFrame {
         Name.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
         Name.setText("الاسم");
 
-        javax.swing.GroupLayout navExpensesِAddLayout = new javax.swing.GroupLayout(navExpensesِAdd);
-        navExpensesِAdd.setLayout(navExpensesِAddLayout);
-        navExpensesِAddLayout.setHorizontalGroup(
-            navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(navExpensesِAddLayout.createSequentialGroup()
+        javax.swing.GroupLayout navExpensesِAdd2Layout = new javax.swing.GroupLayout(navExpensesِAdd2);
+        navExpensesِAdd2.setLayout(navExpensesِAdd2Layout);
+        navExpensesِAdd2Layout.setHorizontalGroup(
+            navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navExpensesِAdd2Layout.createSequentialGroup()
                 .addContainerGap(383, Short.MAX_VALUE)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
-                        .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAdd2Layout.createSequentialGroup()
+                        .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(SerNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(MissionE2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CompN2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -951,7 +1017,7 @@ public class home extends javax.swing.JFrame {
                             .addComponent(Model2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Name2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Count)
                             .addComponent(SerNum)
                             .addComponent(Model)
@@ -959,55 +1025,55 @@ public class home extends javax.swing.JFrame {
                             .addComponent(other)
                             .addComponent(Name))
                         .addGap(25, 25, 25))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAdd2Layout.createSequentialGroup()
                         .addComponent(cancelExp2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SaveExp2)
                         .addGap(135, 135, 135))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAdd2Layout.createSequentialGroup()
                         .addComponent(title)
                         .addGap(145, 145, 145))))
         );
-        navExpensesِAddLayout.setVerticalGroup(
-            navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(navExpensesِAddLayout.createSequentialGroup()
+        navExpensesِAdd2Layout.setVerticalGroup(
+            navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navExpensesِAdd2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(title)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(navExpensesِAddLayout.createSequentialGroup()
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(navExpensesِAdd2Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(Name))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAdd2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Name2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Count)
                     .addComponent(Count2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Model)
                     .addComponent(Model2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SerNum)
                     .addComponent(SerNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CompN)
                     .addComponent(CompN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(other)
                     .addComponent(MissionE2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
-                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(navExpensesِAdd2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cancelExp2)
                     .addComponent(SaveExp2))
-                .addContainerGap(345, Short.MAX_VALUE))
+                .addContainerGap(367, Short.MAX_VALUE))
         );
 
-        nav2.add(navExpensesِAdd, "card2");
+        nav2.add(navExpensesِAdd2, "card2");
 
         navExpensesِ.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1095,7 +1161,7 @@ public class home extends javax.swing.JFrame {
                                 .addGap(146, 146, 146))))
                     .addGroup(navExpensesِLayout.createSequentialGroup()
                         .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
                             .addGroup(navExpensesِLayout.createSequentialGroup()
                                 .addComponent(jButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1129,7 +1195,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navExpensesِLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(cancelExp))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         nav2.add(navExpensesِ, "card2");
@@ -1247,7 +1313,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navExpensesِEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cancelExp3)
                     .addComponent(SaveExp3))
-                .addContainerGap(350, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
 
         nav2.add(navExpensesِEdit, "card2");
@@ -1310,7 +1376,7 @@ public class home extends javax.swing.JFrame {
         navEmployeeEditLayout.setHorizontalGroup(
             navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navEmployeeEditLayout.createSequentialGroup()
-                .addContainerGap(369, Short.MAX_VALUE)
+                .addContainerGap(384, Short.MAX_VALUE)
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navEmployeeEditLayout.createSequentialGroup()
                         .addComponent(jLabel23)
@@ -1374,10 +1440,507 @@ public class home extends javax.swing.JFrame {
                 .addGroup(navEmployeeEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveEmp1)
                     .addComponent(cancelEmp1))
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addContainerGap(392, Short.MAX_VALUE))
         );
 
         nav2.add(navEmployeeEdit, "card2");
+
+        navUsers.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel7.setFont(new java.awt.Font("AdvertisingBold", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("المستخدمين");
+
+        UserAdd.setBackground(new java.awt.Color(102, 204, 255));
+        UserAdd.setFont(new java.awt.Font("AdvertisingBold", 0, 10)); // NOI18N
+        UserAdd.setText("إضافة مستخدم");
+        UserAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserAddActionPerformed(evt);
+            }
+        });
+
+        UserTable.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        UserTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, ""},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "اليوزر", "كلمة المرور", "الصلاحيات"
+            }
+        ));
+        UserTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UserTableMouseClicked(evt);
+            }
+        });
+        jScrollPane5.setViewportView(UserTable);
+
+        javax.swing.GroupLayout navUsersLayout = new javax.swing.GroupLayout(navUsers);
+        navUsers.setLayout(navUsersLayout);
+        navUsersLayout.setHorizontalGroup(
+            navUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navUsersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(navUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(navUsersLayout.createSequentialGroup()
+                        .addGap(0, 615, Short.MAX_VALUE)
+                        .addComponent(UserAdd))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(293, 293, 293))
+        );
+        navUsersLayout.setVerticalGroup(
+            navUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navUsersLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(UserAdd)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        nav2.add(navUsers, "card2");
+
+        navUsersAdd.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel18.setFont(new java.awt.Font("AdvertisingBold", 0, 18)); // NOI18N
+        jLabel18.setText("إضافة مستخدم");
+
+        jLabel22.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        jLabel22.setText("الاسم ");
+
+        NameUserAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameUserAddActionPerformed(evt);
+            }
+        });
+
+        SaveUserAdd.setBackground(new java.awt.Color(102, 204, 255));
+        SaveUserAdd.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        SaveUserAdd.setText("حفظ");
+        SaveUserAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveUserAddActionPerformed(evt);
+            }
+        });
+
+        cancelUserAdd.setBackground(new java.awt.Color(102, 204, 255));
+        cancelUserAdd.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        cancelUserAdd.setText("الغاء");
+        cancelUserAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelUserAddActionPerformed(evt);
+            }
+        });
+
+        PasswordUserAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordUserAddActionPerformed(evt);
+            }
+        });
+
+        jLabel39.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        jLabel39.setText("كلمة المرور");
+
+        jLabel40.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        jLabel40.setText("الصلاحيات");
+
+        power.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "إضافة وحذف ", "إضافة فقط" }));
+        power.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                powerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout navUsersAddLayout = new javax.swing.GroupLayout(navUsersAdd);
+        navUsersAdd.setLayout(navUsersAddLayout);
+        navUsersAddLayout.setHorizontalGroup(
+            navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersAddLayout.createSequentialGroup()
+                .addContainerGap(352, Short.MAX_VALUE)
+                .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersAddLayout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addGap(145, 145, 145))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersAddLayout.createSequentialGroup()
+                        .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NameUserAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PasswordUserAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(navUsersAddLayout.createSequentialGroup()
+                                .addComponent(cancelUserAdd)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(SaveUserAdd))
+                            .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel39)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel40))
+                        .addGap(95, 95, 95))))
+        );
+        navUsersAddLayout.setVerticalGroup(
+            navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navUsersAddLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel18)
+                .addGap(18, 18, 18)
+                .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(NameUserAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(PasswordUserAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(navUsersAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SaveUserAdd)
+                    .addComponent(cancelUserAdd))
+                .addContainerGap(518, Short.MAX_VALUE))
+        );
+
+        nav2.add(navUsersAdd, "card2");
+
+        navExpensesِAdd.setBackground(new java.awt.Color(255, 255, 255));
+
+        title2.setFont(new java.awt.Font("AdvertisingBold", 0, 18)); // NOI18N
+        title2.setText("اضافة قائمة مصروفات");
+
+        SaveExpAdd.setBackground(new java.awt.Color(102, 204, 255));
+        SaveExpAdd.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        SaveExpAdd.setText("حفظ");
+        SaveExpAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveExpAddActionPerformed(evt);
+            }
+        });
+
+        cancelExpAdd.setBackground(new java.awt.Color(102, 204, 255));
+        cancelExpAdd.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        cancelExpAdd.setText("الغاء");
+        cancelExpAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelExpAddActionPerformed(evt);
+            }
+        });
+
+        Name4.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        Name4.setText("الاسم");
+
+        javax.swing.GroupLayout navExpensesِAddLayout = new javax.swing.GroupLayout(navExpensesِAdd);
+        navExpensesِAdd.setLayout(navExpensesِAddLayout);
+        navExpensesِAddLayout.setHorizontalGroup(
+            navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                .addContainerGap(383, Short.MAX_VALUE)
+                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                        .addComponent(title2)
+                        .addGap(145, 145, 145))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                        .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(navExpensesِAddLayout.createSequentialGroup()
+                                .addComponent(cancelExpAdd)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(SaveExpAdd))
+                            .addComponent(NameEXH2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(Name4)
+                        .addGap(100, 100, 100))))
+        );
+        navExpensesِAddLayout.setVerticalGroup(
+            navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navExpensesِAddLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(title2)
+                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(navExpensesِAddLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(Name4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesِAddLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NameEXH2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(navExpensesِAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cancelExpAdd)
+                    .addComponent(SaveExpAdd))
+                .addContainerGap(567, Short.MAX_VALUE))
+        );
+
+        nav2.add(navExpensesِAdd, "card2");
+
+        navExpensesH2.setBackground(new java.awt.Color(255, 255, 255));
+
+        navEmpHead1.setFont(new java.awt.Font("AdvertisingBold", 0, 14)); // NOI18N
+        navEmpHead1.setText("مصروفات القسم");
+
+        ExpH2Add2.setBackground(new java.awt.Color(102, 204, 255));
+        ExpH2Add2.setFont(new java.awt.Font("AdvertisingBold", 0, 10)); // NOI18N
+        ExpH2Add2.setText("اضافة قسم جديد");
+        ExpH2Add2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExpH2Add2ActionPerformed(evt);
+            }
+        });
+
+        ExpensesH2Table1.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        ExpensesH2Table1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "القسم"
+            }
+        ));
+        ExpensesH2Table1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExpensesH2Table1MouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(ExpensesH2Table1);
+
+        javax.swing.GroupLayout navExpensesH2Layout = new javax.swing.GroupLayout(navExpensesH2);
+        navExpensesH2.setLayout(navExpensesH2Layout);
+        navExpensesH2Layout.setHorizontalGroup(
+            navExpensesH2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navExpensesH2Layout.createSequentialGroup()
+                .addContainerGap(348, Short.MAX_VALUE)
+                .addGroup(navExpensesH2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesH2Layout.createSequentialGroup()
+                        .addComponent(ExpH2Add2)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navExpensesH2Layout.createSequentialGroup()
+                        .addComponent(navEmpHead1)
+                        .addGap(285, 285, 285))))
+            .addGroup(navExpensesH2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(navExpensesH2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane6)
+                    .addContainerGap()))
+        );
+        navExpensesH2Layout.setVerticalGroup(
+            navExpensesH2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navExpensesH2Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(navEmpHead1)
+                .addGap(48, 48, 48)
+                .addComponent(ExpH2Add2)
+                .addContainerGap(570, Short.MAX_VALUE))
+            .addGroup(navExpensesH2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(navExpensesH2Layout.createSequentialGroup()
+                    .addGap(151, 151, 151)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(78, Short.MAX_VALUE)))
+        );
+
+        nav2.add(navExpensesH2, "card2");
+
+        navUserH.setBackground(new java.awt.Color(255, 255, 255));
+
+        EmpInfo1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        EmpInfo1.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        EmpInfo1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, "اليوزر"},
+                {null, "كلمة المرور"},
+                {null, "الصلاحيات"}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ));
+        EmpInfo1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane7.setViewportView(EmpInfo1);
+
+        jLabel35.setFont(new java.awt.Font("AdvertisingBold", 0, 18)); // NOI18N
+        jLabel35.setText("بيانات المستخدم");
+
+        cancelUserH.setBackground(new java.awt.Color(102, 204, 255));
+        cancelUserH.setFont(new java.awt.Font("AdvertisingBold", 0, 11)); // NOI18N
+        cancelUserH.setText("رجوع");
+        cancelUserH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelUserHActionPerformed(evt);
+            }
+        });
+
+        EditUserH.setBackground(new java.awt.Color(102, 204, 255));
+        EditUserH.setFont(new java.awt.Font("AdvertisingBold", 0, 11)); // NOI18N
+        EditUserH.setText("تعديل المستخدم");
+        EditUserH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditUserHActionPerformed(evt);
+            }
+        });
+
+        DelUserH.setBackground(new java.awt.Color(102, 204, 255));
+        DelUserH.setFont(new java.awt.Font("AdvertisingBold", 0, 11)); // NOI18N
+        DelUserH.setText("حذف المستخدم");
+        DelUserH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DelUserHActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout navUserHLayout = new javax.swing.GroupLayout(navUserH);
+        navUserH.setLayout(navUserHLayout);
+        navUserHLayout.setHorizontalGroup(
+            navUserHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navUserHLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(navUserHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
+                    .addGroup(navUserHLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cancelUserH))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUserHLayout.createSequentialGroup()
+                        .addComponent(DelUserH)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(EditUserH)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUserHLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel35)
+                .addGap(273, 273, 273))
+        );
+        navUserHLayout.setVerticalGroup(
+            navUserHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUserHLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel35)
+                .addGap(18, 18, 18)
+                .addGroup(navUserHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EditUserH)
+                    .addComponent(DelUserH))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cancelUserH)
+                .addGap(219, 219, 219))
+        );
+
+        nav2.add(navUserH, "card2");
+
+        navUsersEdit.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel34.setFont(new java.awt.Font("AdvertisingBold", 0, 18)); // NOI18N
+        jLabel34.setText("تعديل بيانات مستخدم");
+
+        jLabel36.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        jLabel36.setText("الاسم ");
+
+        NameUserEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameUserEditActionPerformed(evt);
+            }
+        });
+
+        SaveUserEdit.setBackground(new java.awt.Color(102, 204, 255));
+        SaveUserEdit.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        SaveUserEdit.setText("حفظ");
+        SaveUserEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveUserEditActionPerformed(evt);
+            }
+        });
+
+        cancelUserEdit.setBackground(new java.awt.Color(102, 204, 255));
+        cancelUserEdit.setFont(new java.awt.Font("AdvertisingBold", 0, 12)); // NOI18N
+        cancelUserEdit.setText("الغاء");
+        cancelUserEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelUserEditActionPerformed(evt);
+            }
+        });
+
+        PasswordUserEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordUserEditActionPerformed(evt);
+            }
+        });
+
+        jLabel41.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        jLabel41.setText("كلمة المرور");
+
+        jLabel42.setFont(new java.awt.Font("AdvertisingBold", 0, 16)); // NOI18N
+        jLabel42.setText("الصلاحيات");
+
+        power1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "إضافة وحذف ", "إضافة فقط" }));
+        power1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                power1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout navUsersEditLayout = new javax.swing.GroupLayout(navUsersEdit);
+        navUsersEdit.setLayout(navUsersEditLayout);
+        navUsersEditLayout.setHorizontalGroup(
+            navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersEditLayout.createSequentialGroup()
+                .addContainerGap(352, Short.MAX_VALUE)
+                .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersEditLayout.createSequentialGroup()
+                        .addComponent(jLabel34)
+                        .addGap(145, 145, 145))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navUsersEditLayout.createSequentialGroup()
+                        .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NameUserEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PasswordUserEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(navUsersEditLayout.createSequentialGroup()
+                                .addComponent(cancelUserEdit)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(SaveUserEdit))
+                            .addComponent(power1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel41)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel42))
+                        .addGap(95, 95, 95))))
+        );
+        navUsersEditLayout.setVerticalGroup(
+            navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navUsersEditLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel34)
+                .addGap(18, 18, 18)
+                .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(NameUserEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(PasswordUserEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42)
+                    .addComponent(power1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(navUsersEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SaveUserEdit)
+                    .addComponent(cancelUserEdit))
+                .addContainerGap(518, Short.MAX_VALUE))
+        );
+
+        nav2.add(navUsersEdit, "card2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1887,7 +2450,7 @@ public class home extends javax.swing.JFrame {
         nav2.repaint();
         nav2.revalidate();
         //adding panel
-        nav2.add(navExpensesِAdd);
+        nav2.add(navExpensesِAdd2);
         nav2.repaint();
         nav2.revalidate();
         
@@ -1912,7 +2475,7 @@ public class home extends javax.swing.JFrame {
         nav2.repaint();
         nav2.revalidate();
         //adding panel
-        nav2.add(navExpansesH);
+        nav2.add(navExpensesH2);
         nav2.repaint();
         nav2.revalidate();
     }//GEN-LAST:event_expensesActionPerformed
@@ -1945,6 +2508,179 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_IDActionPerformed
 
+    private void UserAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserAddActionPerformed
+        // TODO add your handling code here:
+         //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUsersAdd);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_UserAddActionPerformed
+
+    private void UserTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserTableMouseClicked
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUserH);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_UserTableMouseClicked
+
+    private void usersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usersActionPerformed
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUsers);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_usersActionPerformed
+
+    private void SaveUserAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveUserAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SaveUserAddActionPerformed
+
+    private void cancelUserAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelUserAddActionPerformed
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUsers);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelUserAddActionPerformed
+
+    private void NameUserAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameUserAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameUserAddActionPerformed
+
+    private void PasswordUserAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordUserAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordUserAddActionPerformed
+
+    private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_powerActionPerformed
+
+    private void SaveExpAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveExpAddActionPerformed
+         Expensses EXPH1 = new Expensses();
+        EXPH1.setName(NameEXH2.getText());
+       
+
+        data.AddExp(EXPH1);
+
+        NameEXH2.setText("");
+       
+            
+        UpdateData();
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesH2);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_SaveExpAddActionPerformed
+
+    private void cancelExpAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelExpAddActionPerformed
+        //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesH2);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelExpAddActionPerformed
+
+    private void ExpH2Add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExpH2Add2ActionPerformed
+         //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesِAdd);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_ExpH2Add2ActionPerformed
+
+    private void ExpensesH2Table1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpensesH2Table1MouseClicked
+          //remove panel
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesH1);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_ExpensesH2Table1MouseClicked
+
+    private void ExpAdd2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExpAdd2ActionPerformed
+       nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navExpensesH2);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_ExpAdd2ActionPerformed
+
+    private void cancelUserHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelUserHActionPerformed
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUsers);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelUserHActionPerformed
+
+    private void EditUserHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditUserHActionPerformed
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUsersEdit);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_EditUserHActionPerformed
+
+    private void DelUserHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DelUserHActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DelUserHActionPerformed
+
+    private void NameUserEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameUserEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameUserEditActionPerformed
+
+    private void SaveUserEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveUserEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SaveUserEditActionPerformed
+
+    private void cancelUserEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelUserEditActionPerformed
+        nav2.removeAll();
+        nav2.repaint();
+        nav2.revalidate();
+        //adding panel
+        nav2.add(navUserH);
+        nav2.repaint();
+        nav2.revalidate();
+    }//GEN-LAST:event_cancelUserEditActionPerformed
+
+    private void PasswordUserEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordUserEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordUserEditActionPerformed
+
+    private void power1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_power1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_power1ActionPerformed
+
     
     
     
@@ -1961,15 +2697,21 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JTextField Count3;
     private javax.swing.JButton DelEm;
     private javax.swing.JButton DelEx;
+    private javax.swing.JButton DelUserH;
     private javax.swing.JButton EditEm;
     private javax.swing.JButton EditEx;
+    private javax.swing.JButton EditUserH;
     private javax.swing.JTextField EmailE;
     private javax.swing.JTextField EmailE1;
     private javax.swing.JButton EmpAdd;
     private javax.swing.JTable EmpInfo;
+    private javax.swing.JTable EmpInfo1;
     private javax.swing.JTable EmpTable;
     private javax.swing.JButton ExpAdd1;
+    private javax.swing.JButton ExpAdd2;
+    private javax.swing.JButton ExpH2Add2;
     private javax.swing.JTable ExpShow;
+    private javax.swing.JTable ExpensesH2Table1;
     private javax.swing.JTable ExpensesTable;
     private javax.swing.JTextField ID;
     private javax.swing.JTextField MissionE;
@@ -1984,10 +2726,16 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel Name1;
     private javax.swing.JTextField Name2;
     private javax.swing.JTextField Name3;
+    private javax.swing.JLabel Name4;
     private javax.swing.JTextField NameE;
     private javax.swing.JTextField NameE1;
+    private javax.swing.JTextField NameEXH2;
+    private javax.swing.JTextField NameUserAdd;
+    private javax.swing.JTextField NameUserEdit;
     private javax.swing.JTextField NummberE;
     private javax.swing.JTextField NummberE1;
+    private javax.swing.JPasswordField PasswordUserAdd;
+    private javax.swing.JPasswordField PasswordUserEdit;
     private javax.swing.JTextField PerfE;
     private javax.swing.JTextField PerfE1;
     private javax.swing.JButton PrintEM;
@@ -1996,16 +2744,25 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton SaveEmp1;
     private javax.swing.JButton SaveExp2;
     private javax.swing.JButton SaveExp3;
+    private javax.swing.JButton SaveExpAdd;
+    private javax.swing.JButton SaveUserAdd;
+    private javax.swing.JButton SaveUserEdit;
     private javax.swing.JLabel SerN;
     private javax.swing.JLabel SerNum;
     private javax.swing.JLabel SerNum1;
     private javax.swing.JTextField SerNum2;
+    private javax.swing.JButton UserAdd;
+    private javax.swing.JTable UserTable;
     private javax.swing.JButton cancelEm;
     private javax.swing.JButton cancelEmp;
     private javax.swing.JButton cancelEmp1;
     private javax.swing.JButton cancelExp;
     private javax.swing.JButton cancelExp2;
     private javax.swing.JButton cancelExp3;
+    private javax.swing.JButton cancelExpAdd;
+    private javax.swing.JButton cancelUserAdd;
+    private javax.swing.JButton cancelUserEdit;
+    private javax.swing.JButton cancelUserH;
     private javax.swing.JButton employee;
     private javax.swing.JButton expenses;
     private javax.swing.JButton farsbutton;
@@ -2019,10 +2776,12 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2035,34 +2794,56 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JLabel logo;
     private javax.swing.JButton moebutton;
     private javax.swing.JPanel nav1;
     private javax.swing.JPanel nav2;
     private javax.swing.JLabel navEmpHead;
+    private javax.swing.JLabel navEmpHead1;
     private javax.swing.JPanel navEmployee;
     private javax.swing.JPanel navEmployeeAdd;
     private javax.swing.JPanel navEmployeeEdit;
     private javax.swing.JPanel navEmployeeH;
     private javax.swing.JPanel navExpansesH;
     private javax.swing.JPanel navExpensesH1;
+    private javax.swing.JPanel navExpensesH2;
     private javax.swing.JPanel navExpensesِ;
     private javax.swing.JPanel navExpensesِAdd;
+    private javax.swing.JPanel navExpensesِAdd2;
     private javax.swing.JPanel navExpensesِEdit;
     private javax.swing.JPanel navHome1;
     private javax.swing.JPanel navProgz;
+    private javax.swing.JPanel navUserH;
+    private javax.swing.JPanel navUsers;
+    private javax.swing.JPanel navUsersAdd;
+    private javax.swing.JPanel navUsersEdit;
     private javax.swing.JButton norbutton;
     private javax.swing.JLabel other;
     private javax.swing.JLabel other1;
+    private javax.swing.JComboBox<String> power;
+    private javax.swing.JComboBox<String> power1;
     private javax.swing.JButton progz;
     private javax.swing.JLabel title;
     private javax.swing.JLabel title1;
+    private javax.swing.JLabel title2;
+    private javax.swing.JButton users;
     // End of variables declaration//GEN-END:variables
 }
