@@ -28,18 +28,22 @@ public class Document {
     private Font ttfReal = null;
     private String N = "اسم الموظف : " ,  J = "المسمى الوظيفي : " , P = "رقم الجوال : ", ID = "هوية الموظف : ", E = "البريد الالكتروني : ", S = "القسم : "; 
     
-    public Document(String ImagePath , String FontPath)  {
+    private ResourcLoader res;
+    
+    public Document(ResourcLoader res)  {
      
+        this.res = res;
+        
         try{
         
                         Font ttfBase = null;
-			InputStream myStream = new BufferedInputStream(new FileInputStream(FontPath));
+			InputStream myStream = new BufferedInputStream(this.res.getFont());
 			ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
 			ttfReal = ttfBase.deriveFont(Font.PLAIN, 24);
    
    
 
-        image = ImageIO.read(new File(ImagePath));
+        image = ImageIO.read(this.res.getDoc());
 
         g = image.getGraphics();
         g.setColor(Color.BLACK);

@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -42,26 +43,21 @@ public class home extends javax.swing.JFrame {
     private DataBaseManger data;
     private int Authorize;
     private int Cloumn;
-    private  ImageLabel image;
-    private String M_font;// = getClass().getClassLoader().getResource("res/M.ttf").toString();
-    private String Doc; // = getClass().getClassLoader().getResource("res/Doc.png").toString();
-
+    private ImageLabel image;
+    private ResourcLoader res;
     
-    public home(DataBaseManger data , int authorize) {
+    public home(DataBaseManger data , int authorize , ResourcLoader res) {
         initComponents();
         
-        
-        M_font = getClass().getClassLoader().getResource("res/M.ttf").getFile();
-        Doc = getClass().getClassLoader().getResource("res/Doc.png").getFile();
+        this.res = res;
         
         this.setAutoRequestFocus(true);
         this.setLocationRelativeTo(null);  // *** this will center your app ***
         
-        String pathToImageSortBy = "res/icon.png";
-        ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
+        ImageIcon img = new ImageIcon(res.getIcon());
         this.setIconImage(img.getImage());   
     
-        ImageIcon BackGround = new ImageIcon(getClass().getClassLoader().getResource("res/home.jpg"));
+        ImageIcon BackGround = new ImageIcon(res.getBackground());
         
         image = new ImageLabel("");
         image.setIcon(BackGround);
@@ -2227,7 +2223,7 @@ public class home extends javax.swing.JFrame {
     private void PrintEMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintEMActionPerformed
         // TODO add your handling code here:
         
-        Document doc = new Document(Doc, M_font);
+        Document doc = new Document(res);
         doc.PrintEmployeeInfo(data.getinfo(Cloumn));
         
     }//GEN-LAST:event_PrintEMActionPerformed

@@ -199,12 +199,6 @@
                   <Font name="AdvertisingBold" size="11" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x645;&#x633;&#x62a;&#x62e;&#x62f;&#x645;&#x64a;&#x646;"/>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[73, 23]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[73, 23]"/>
-                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usersActionPerformed"/>

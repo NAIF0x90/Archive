@@ -7,6 +7,8 @@ package archive;
 
 import Objects.DataBaseManger;
 import java.awt.event.KeyEvent;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -17,8 +19,8 @@ import javax.swing.JOptionPane;
 public class login extends javax.swing.JFrame {
 
     
-    DataBaseManger data = new DataBaseManger();
-
+    private DataBaseManger data = new DataBaseManger();
+    private ResourcLoader res;
     /**
      * Creates new form home
      */
@@ -29,8 +31,9 @@ public class login extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);  // *** this will center your app ***
         
         
-        String pathToImageSortBy = "res/icon.png";
-        ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(pathToImageSortBy));
+        res = new ResourcLoader();
+        
+        ImageIcon img = new ImageIcon(res.getIcon());
         this.setIconImage(img.getImage());   
             
         
@@ -279,7 +282,7 @@ public class login extends javax.swing.JFrame {
             System.out.println(i);
             if(user.getText().equals(data.getUser(i).getUserName()) && password.getText().equals(data.getUser(i).getPassWord())){
                 
-                home H = new home(data ,data.getUser(i).getAuthorize());
+                home H = new home(data ,data.getUser(i).getAuthorize() , res);
                          H.setVisible(rootPaneCheckingEnabled);
                          this.setVisible(false);
                          break;
