@@ -7,6 +7,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class DataBaseManger {
@@ -32,6 +34,7 @@ public class DataBaseManger {
 	private ArrayList<EMP_INFO> emp_info = new ArrayList<EMP_INFO>();
         private ArrayList<Expensses> Expensses = new ArrayList<Expensses>();
         private ArrayList<User> Users = new ArrayList<User>();
+        private ArrayList<ExpenssesTypes> ExpenssesTypes = new ArrayList<ExpenssesTypes>();
 
 	
 	
@@ -74,29 +77,10 @@ public class DataBaseManger {
                                 emp.setPhone(rs.getString("Phone"));
                                 emp.setJob(rs.getString("Job"));
                                 emp.setEmail(rs.getString("Email"));
-				
+				emp.setPK(rs.getInt("PK"));
 				emp_info.add(emp);
 			}
 			else System.out.println("There is no Data");
-			
-                        String Select_EXP = "SELECT * FROM `Exp` ";
-                        
-                        ResultSet rsExp = connect.createStatement().executeQuery(Select_EXP);
-			if(rsExp != null)
-			while(rsExp.next()){
-				Expensses Exp = new Expensses();
-				
-                                Exp.setName(rsExp.getString("Name"));
-                                Exp.setSerial(rsExp.getString("Siral"));
-                                Exp.setNumber(rsExp.getString("Number"));
-                                Exp.setCompany(rsExp.getString("Com"));
-                                Exp.setOther(rsExp.getString("Other"));
-                                Exp.setModel(rsExp.getString("Model"));
-                                
-                                Expensses.add(Exp);
-				
-			}
-			else System.out.println("There is no Expenses");
 			
                         String Select_Users = "SELECT * FROM `Users` ";
                         
@@ -109,14 +93,32 @@ public class DataBaseManger {
                             user.setUserName(rsU.getString("Username"));
                             user.setPassWord(rsU.getString("Password"));
                             user.setAuthorize(rsU.getInt("Authorize"));
-				
+                            user.setPK(rsU.getInt("PK"));
                             Users.add(user);
 			}
+			else System.out.println("There is no Expenses");
+                        
+                        
+                        
+                        String Select_E = "SELECT * FROM `E` ";
+                        
+                        ResultSet rsE = connect.createStatement().executeQuery(Select_E);
+			if(rsE != null)
+			while(rsE.next()){
+
+                           ExpenssesTypes Ex = new ExpenssesTypes();
+                           Ex.setName(rsE.getString("Name"));
+                           Ex.setPK(rsE.getInt("PK"));
+                           
+                           ExpenssesTypes.add(Ex);
+
+                        }
 			else System.out.println("There is no Expenses");
                         
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+                
 		
 	}
 	
@@ -143,7 +145,53 @@ public class DataBaseManger {
         public int getExpSize(){
             return Expensses.size();
         }
-	
+        
+        public int getExpenssesSize(){
+            return ExpenssesTypes.size();
+        }
+
+        public ExpenssesTypes getTypes(int Pos){
+            return this.ExpenssesTypes.get(Pos);
+        }
+        
+        public void getExpenssesData(int Parent){
+            
+                    
+            Expensses.clear();
+            
+                        String Select_EXP = "SELECT * FROM `Exp` WHERE `Parent` = " + Parent;
+                        
+                        ResultSet rsExp;
+            try {
+                         if(connect.isClosed())
+				Connect();
+                         
+                rsExp = connect.createStatement().executeQuery(Select_EXP);
+           
+			if(rsExp != null)
+			while(rsExp.next()){
+				Expensses Exp = new Expensses();
+				
+                                Exp.setName(rsExp.getString("Name"));
+                                Exp.setSerial(rsExp.getString("Siral"));
+                                Exp.setNumber(rsExp.getString("Number"));
+                                Exp.setCompany(rsExp.getString("Com"));
+                                Exp.setOther(rsExp.getString("Other"));
+                                Exp.setModel(rsExp.getString("Model"));
+                                Exp.setPK(rsExp.getInt("PK"));
+                                Expensses.add(Exp);
+				
+			}
+			else System.out.println("There is no Expenses");
+                        
+                        connect.close();
+                        
+                         } catch (SQLException ex) {
+                Logger.getLogger(DataBaseManger.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        
+        }
+        
 	public void Close(){
 		try {
 			connect.close();
@@ -182,32 +230,37 @@ public class DataBaseManger {
 		
 		
 		 String Create_Table = "CREATE TABLE Employee(" +  
-				 "Ecount int AUTO_INCREMENT,"+
 				 "ID CHARACTER ,"+
 				 "Section CHARACTER," +
 				 "Name CHARACTER,"+
                                  "Phone CHARACTER,"+
                                  "Job CHARACTER ,"+
-                                 "Email CHARACTER"+
-                                 ");";
+                                 "Email CHARACTER,"+
+                                 "PK Integer PRIMARY KEY AUTOINCREMENT );";
                  
                  String CreateE_Table = "CREATE TABLE Exp(" +  
-				 "Ecount int AUTO_INCREMENT,"+
                                  "Name CHARACTER," +
                                  "Siral CHARACTER,"+
 				 "Number CHARACTER," +
 				 "Com CHARACTER," +
 				 "Other CHARACTER,"+
-                                 "Model CHARACTER );";
+                                 "Model CHARACTER,"+
+                                 "Parent Integer REFERENCES E(PK),"+
+                                 "PK Integer PRIMARY KEY AUTOINCREMENT );";
 		
                  String Create_User = "CREATE TABLE Users(" +  
                                  "Username CHARACTER," +
 				 "Password CHARACTER,"+
-                                 "Authorize TINYINT(1));";
+                                 "Authorize TINYINT(1),"+
+                                 "PK Integer PRIMARY KEY AUTOINCREMENT);";
+                 
+                 String Create_ExpT = "CREATE TABLE E(" +  
+                                 "Name CHARACTER," +
+                                 "PK Integer PRIMARY KEY AUTOINCREMENT);";
                  
 		 String InsertData = "INSERT INTO Users(`Username` ,`Password` ,`Authorize` ) VALUES ('"+
 		 Admin_UserName + "' , '" +
-		 Admin_PassWord + "' , 1);";
+		 Admin_PassWord + "' , 0);";
 		 
 		 Connect();
 		 
@@ -221,9 +274,14 @@ public class DataBaseManger {
 			connect.createStatement().execute(InsertData);
 			System.out.println("Data Have Bean Inserted");
                         
+                        connect.createStatement().execute(Create_ExpT);
+			System.out.println("Exp Types Have Bean Inserted");
+                        
                         connect.createStatement().execute(CreateE_Table);
 			System.out.println("Expensses Have Bean Inserted");
+                        
 
+                        
 			Close();
 			
 		} catch (SQLException e) {
@@ -240,7 +298,7 @@ public class DataBaseManger {
 			
 			String updateQury = "UPDATE `Employee` SET `Name`='"+ emp.getName() + "', `Section`='"+ emp.getSection()+
                                         "' , `Phone`='" + emp.getPhone() + "' ,`Job`=  '" + emp.getJob() + "' , `Email` = '"+ emp.getEmail()+
-					"'  WHERE ID=" + emp.getID();
+					"' , `ID`= '" + emp.getID() + "' WHERE `PK`=" + emp.getPK();
 			
 			connect.createStatement().execute(updateQury);
 			System.out.println("Data has Bean updated");
@@ -259,8 +317,7 @@ public class DataBaseManger {
 				Connect();
 			
 			String updateQury = "UPDATE `Users` SET `Username`='"+ user.getUserName() + "', `Password`='"+ user.getPassWord()+
-                                        "' , `Authorize`=" + user.getAuthorize() + " WHERE `Username`= '" + user.getUserName() + "' AND  `Password`='"+ user.getPassWord()+
-                                        "';";
+                                        "' , `Authorize`=" + user.getAuthorize() + " WHERE `PK` = " + user.getPK() +";";
 			
 			connect.createStatement().execute(updateQury);
 			System.out.println("Data has Bean updated");
@@ -277,7 +334,7 @@ public class DataBaseManger {
 			if(connect.isClosed())
 				Connect();
 			
-			String deleteQury = "DELETE FROM `Username` where Username =" + username+";";
+			String deleteQury = "DELETE FROM `Users` WHERE `Username` ='" + username+"';";
 			
 			connect.createStatement().execute(deleteQury);
 			System.out.println("Data has Bean Deleted");
@@ -325,15 +382,15 @@ public class DataBaseManger {
 		
 	}
         
-        public void UpdateUserID(EMP_INFO emp){
-            
-            
-            		
+        
+        public void AddUser(User user){
+		
 		try {
 			if(connect.isClosed())
 				Connect();
 			
-			String AddQury = "UPDATE `Employee` SET `ID` = '" +  emp.getID() + "' WHERE `Name` = '" + emp.getName() + "';";
+			String AddQury = "INSERT INTO `Users` (`Username` , `Password` , `Authorize` ) " +
+					"VALUES ('" + user.getUserName() +"' , '" + user.getPassWord() + "'," + user.getAuthorize() +");";
 			
 			connect.createStatement().execute(AddQury);
 			System.out.println("Data has Bean Added");
@@ -342,8 +399,8 @@ public class DataBaseManger {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-            
-        }
+		
+	}
                 
         public void AddExp(Expensses exp){
 		
@@ -351,9 +408,9 @@ public class DataBaseManger {
 			if(connect.isClosed())
 				Connect();
 			
-			String AddQury = "INSERT INTO `Exp` (`Name` , `Siral` , `Number` , `Com` , `Other` , `Model` ) " +
+			String AddQury = "INSERT INTO `Exp` (`Name` , `Siral` , `Number` , `Com` , `Other` , `Model`  , `Parent`) " +
 					"VALUES ('"+ exp.getName() + "' , '" + exp.getSerial() + "','" + exp.getNumber() +  "','"+
-					exp.getCompany() + "','" + exp.getOther() +"'," +" ' " + exp.getModel() + "');";
+					exp.getCompany() + "','" + exp.getOther() +"'," +" ' " + exp.getModel() + "',' " + exp.getParent() +  "');";
 			
 			connect.createStatement().execute(AddQury);
 			System.out.println("Expensses has Bean Added");
@@ -373,7 +430,7 @@ public class DataBaseManger {
 			
 			String updateQury = "UPDATE `Exp` SET `Name`='"+ exp.getName() + "', `Number`='"+ exp.getNumber()+
 					"', `Model` = '"+ exp.getModel() +"' , `Com`= '" + exp.getCompany()  +
-                                        "', `Other`='" + exp.getOther() + "' WHERE Siral=" + exp.getSerial();
+                                        "', `Other`='" + exp.getOther() + "', `Siral` = '" +exp.getSerial() + "' WHERE PK=" + exp.getPK();
 			
 			connect.createStatement().execute(updateQury);
 			System.out.println("Data has Bean updated");
@@ -384,13 +441,13 @@ public class DataBaseManger {
             
         }
         
-        public void DeleteExp(String S){
+        public void DeleteExp(int PK){
             
             		try {
 			if(connect.isClosed())
 				Connect();
 			
-			String deleteQury = "DELETE FROM `Exp` where Siral =" + S+";";
+			String deleteQury = "DELETE FROM `Exp` where `PK` =" +PK+";";
 			
 			connect.createStatement().execute(deleteQury);
 			System.out.println("Data has Bean Deleted");
@@ -401,8 +458,21 @@ public class DataBaseManger {
             
         }
         
-        
-        
-        
+        public void ADDETypes(String Name){
+            
+                    try {
+			if(connect.isClosed())
+				Connect();
+			
+			String AddQury = "INSERT INTO `E` ( `Name` ) VALUES ('" + Name+"' );";
+			
+                        connect.createStatement().execute(AddQury);
+			System.out.println("Data has Bean Added");
+			Close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+            
+        }
 	
 }

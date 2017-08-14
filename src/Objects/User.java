@@ -14,6 +14,7 @@ public class User {
         private String UserName;
         private String PassWord;
         private int Authorize;
+        private int PK;
 
     /**
      * @return the UserName
@@ -55,6 +56,20 @@ public class User {
      */
     public void setAuthorize(int Authorize) {
         this.Authorize = Authorize;
+    }
+
+    /**
+     * @return the PK
+     */
+    public int getPK() {
+        return PK;
+    }
+
+    /**
+     * @param PK the PK to set
+     */
+    public void setPK(int PK) {
+        this.PK = PK;
     }
     
     

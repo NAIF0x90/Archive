@@ -17,7 +17,9 @@ public class Expensses {
     private String serial;
     private String Company;
     private String Other;
-
+    private int PK;
+    private int Parent;
+    
     /**
      * @return the Name
      */
@@ -100,6 +102,34 @@ public class Expensses {
      */
     public void setOther(String Other) {
         this.Other = Other;
+    }
+
+    /**
+     * @return the PK
+     */
+    public int getPK() {
+        return PK;
+    }
+
+    /**
+     * @param PK the PK to set
+     */
+    public void setPK(int PK) {
+        this.PK = PK;
+    }
+
+    /**
+     * @return the Parent
+     */
+    public int getParent() {
+        return Parent;
+    }
+
+    /**
+     * @param Parent the Parent to set
+     */
+    public void setParent(int Parent) {
+        this.Parent = Parent;
     }
     
     

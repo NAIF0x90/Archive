@@ -9,7 +9,7 @@ public class EMP_INFO {
         private String Phone;
         private String Job;
         private String Email;
-
+        private int PK;
 	
 	public EMP_INFO() {
 		// TODO Auto-generated constructor stub
@@ -97,6 +97,20 @@ public class EMP_INFO {
      */
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    /**
+     * @return the PK
+     */
+    public int getPK() {
+        return PK;
+    }
+
+    /**
+     * @param PK the PK to set
+     */
+    public void setPK(int PK) {
+        this.PK = PK;
     }
 
     /**

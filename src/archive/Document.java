@@ -1,6 +1,7 @@
 package archive;
 
 import Objects.EMP_INFO;
+import Objects.Expensses;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -27,6 +28,8 @@ public class Document {
     private int TEXTPOSITON_H;
     private Font ttfReal = null;
     private String N = "اسم الموظف : " ,  J = "المسمى الوظيفي : " , P = "رقم الجوال : ", ID = "هوية الموظف : ", E = "البريد الالكتروني : ", S = "القسم : "; 
+    
+    private String EN = "المصروف : " , ES = "الرقم التسلسلي : " , EO = "المتبقي : " , ENU = "العدد الكلي : " , EC = "الشركة : " , EM  = "الموديل : " ;
     
     private ResourcLoader res;
     
@@ -95,6 +98,52 @@ public class Document {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+        
+    }
+    
+    
+    public void PrintExpensses(Expensses exp){
+        
+        
+          try {
+            
+            
+        TEXTPOSITON_W = 1500;
+        TEXTPOSITON_H = (image.getHeight()/ 2 ) / 2;
+         
+
+        EN = EN + exp.getName();
+        ES = ES + exp.getSerial();
+        EC = EC + exp.getCompany();
+        EM = EM + exp.getModel();
+        EO = EO + exp.getOther();
+        ENU = ENU + exp.getNumber();
+
+        int Sepr = 100;
+        TEXTPOSITON_H += Sepr;
+
+        g.drawString(EN ,  TEXTPOSITON_W - g.getFontMetrics().stringWidth(EN), TEXTPOSITON_H);
+        TEXTPOSITON_H += Sepr;
+        g.drawString(EC, TEXTPOSITON_W - g.getFontMetrics().stringWidth(EC), TEXTPOSITON_H);
+        TEXTPOSITON_H += Sepr;
+        g.drawString(EM , TEXTPOSITON_W - g.getFontMetrics().stringWidth(EM), TEXTPOSITON_H);
+        TEXTPOSITON_H += Sepr;
+        g.drawString(ENU,  TEXTPOSITON_W - g.getFontMetrics().stringWidth(ENU), TEXTPOSITON_H);
+        TEXTPOSITON_H += Sepr;
+        g.drawString(EO,  TEXTPOSITON_W - g.getFontMetrics().stringWidth(EO), TEXTPOSITON_H);
+        TEXTPOSITON_H += Sepr;
+        g.drawString(ES , TEXTPOSITON_W - g.getFontMetrics().stringWidth(ES), TEXTPOSITON_H);        
+        g.dispose();
+        
+        new Thread(new PrintActionListener(image)).start();         
+        System.out.println("Document Have Bean Printed");
+
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         
         
     }
